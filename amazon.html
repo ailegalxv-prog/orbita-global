@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ORBITA IX · Amazon</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://global.orbita-ix.com/amazon.html">
+<link rel="alternate" hreflang="uk" href="https://global.orbita-ix.com/amazon.html">
+<link rel="alternate" hreflang="en" href="https://global.orbita-ix.com/amazon-en.html">
+<meta name="description" content="Проєкт магазину на Amazon під ключ: Мексика та Канада, модель, команда, етапи, калькулятори прибутку.">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#FFFDF8; --panel:#F6F2E9; --sunk:#EFE9DC;
+  --ink:#0F1A2A; --ink2:#545D6B; --muted:#8A8578; --line:#E4DCCB;
+  --accent:#8A6A22; --accent-soft:#F3EAD5;
+  --teal:#0E1F31; --teal-soft:#E3E8EF;
+  --plum:#0E4B8C; --plum-soft:#E2EAF3;
+  --bar:#C9C1AE;
+  --display:Georgia,"Times New Roman",serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#FFFDF8}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.025em;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,4.2vw,44px);line-height:1.12}
+h3{font-size:19px;line-height:1.3;font-weight:500}
+p{margin:0}
+.lead{font-size:clamp(18px,2vw,21px);color:var(--ink2);max-width:62ch}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.num{font-variant-numeric:tabular-nums}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#0A1725;border-bottom:1px solid rgba(148,166,190,.16)}
+.nav a{color:#94A6BE!important}.nav a:hover{background:rgba(148,166,190,.12)!important;color:#EDF2F9!important}
+.back{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}.back img{height:22px;width:auto;display:block}.back span{font:500 12px var(--mono);color:#B08A34}
+.langsw{display:flex;border:1px solid rgba(148,166,190,.35);border-radius:2px;flex:none;margin-left:auto}.langsw a,.langsw b{font:600 12px/1 var(--mono);letter-spacing:.08em;padding:8px 10px;text-decoration:none}.langsw a{color:#94A6BE!important}.langsw b{background:#B08A34;color:#0A1725}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:56px}
+.brand{font:400 14px/1 var(--display);white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{display:block;padding:8px 10px;font-size:14px;color:var(--ink2);text-decoration:none;border-radius:8px;white-space:nowrap}
+.nav a:hover{background:var(--panel);color:var(--ink)}
+
+section{padding-block:96px;border-bottom:1px solid var(--line)}
+.head{display:grid;gap:16px;margin-bottom:48px;max-width:780px}
+
+.hero{padding-block:72px 64px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(34px,5.6vw,64px);line-height:1.05;margin-block:18px 22px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.route{width:100%;height:auto;display:block;overflow:visible}
+.route text{font-family:var(--body);fill:var(--muted);font-size:13px}
+.route .lbl{font-family:var(--display);font-weight:500;fill:var(--ink);font-size:15px}
+.route .path{fill:none;stroke:var(--line);stroke-width:2}
+.route .flow{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:6 10;animation:dash 1.6s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-32}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
+.stat{background:var(--panel);border-radius:14px;padding:22px 22px 20px;display:grid;gap:8px;align-content:start}
+.stat b{font:400 clamp(28px,3.4vw,38px)/1 var(--display);font-variant-numeric:tabular-nums}
+.stat.acc b{color:var(--accent)}
+.stat span{font-size:15px;color:var(--ink2)}
+.note{font-size:14px;color:var(--muted);margin-top:16px;max-width:80ch}
+.note sup,.stat sup{color:var(--accent)}
+
+/* liveliness */
+.hero{background:#FFFDF8}
+.hero .stat{background:#FFFFFF;border:1px solid var(--line)}
+.tint-a{background:#F6F2E9}
+.tint-b{background:#F0F3F7}
+.tint-a .panel,.tint-b .panel,.tint-a .chartbox,.tint-b .yr,.tint-a .person,.tint-b .sc,.tint-a .tbl{background:#FFFFFF;border:1px solid var(--line)}
+.tint-a .au{background:#FFFFFF}
+.tint-a .au.later{background:transparent}
+.sc{transition:transform .25s,box-shadow .25s}
+.sc:hover,.au:hover,.panel:hover{transform:translateY(-3px);border-color:#B08A34}
+.au,.panel{transition:transform .25s,box-shadow .25s}
+.flow-wrap{position:relative;padding-top:26px}
+.flow-track{position:absolute;left:0;right:0;top:8px;height:2px;background:repeating-linear-gradient(90deg,var(--bar) 0 6px,transparent 6px 12px)}
+.parcel{position:absolute;top:-9px;left:0;width:20px;height:20px;color:var(--accent);animation:travel 7s linear infinite}
+@keyframes travel{from{left:0}to{left:calc(100% - 20px)}}
+.fs{animation:pulse 7s infinite;animation-delay:calc(var(--i) * 1s)}
+@keyframes pulse{0%,16%,100%{transform:none}5%,11%{transform:translateY(-6px);background:#FFFFFF}}
+.fs.pr{border-image:linear-gradient(90deg,var(--accent) 50%,var(--teal) 50%) 1;border-top-width:3px;border-top-style:solid}
+.fs.t{border-top-color:var(--teal)}
+.mbars{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:end;height:220px;border-bottom:1px solid var(--line);margin-top:8px}
+.mbars div{height:var(--h);border-radius:6px 6px 0 0;background:var(--plum);display:flex;align-items:flex-start;justify-content:center;padding-top:10px;color:#FFFFFF;font:400 18px/1 var(--display);transform-origin:bottom}
+.mbars div:first-child{background:var(--bar);color:var(--ink)}
+.mbars div.more{background:var(--plum);color:#FFFFFF;border-top:3px dashed #B08A34}
+.seg.s4{grid-template-columns:repeat(4,1fr)}
+.calc2{margin-top:32px}
+.out .gain{color:#8FD9CF}
+.mlabels{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;font-size:14px;color:var(--ink2);margin-top:10px;text-align:center}
+.play .mbars div{animation:rise 1.3s cubic-bezier(.2,.7,.2,1) both}
+.play .mbars div:nth-child(2){animation-delay:.15s}.play .mbars div:nth-child(3){animation-delay:.3s}.play .mbars div:nth-child(4){animation-delay:.45s}
+.dots i{transition:transform .3s}
+.gcol.in .dots i{animation:pop .5s cubic-bezier(.3,1.6,.5,1) both}
+.gcol.in .dots i:nth-child(2){animation-delay:.08s}.gcol.in .dots i:nth-child(3){animation-delay:.16s}.gcol.in .dots i:nth-child(4){animation-delay:.24s}.gcol.in .dots i:nth-child(5){animation-delay:.32s}.gcol.in .dots i:nth-child(6){animation-delay:.4s}.gcol.in .dots i:nth-child(7){animation-delay:.48s}.gcol.in .dots i:nth-child(8){animation-delay:.56s}
+@keyframes pop{from{transform:scale(0)}}
+.del-wrap{position:relative}
+.truck{position:absolute;top:-34px;left:0;width:30px;height:30px;color:var(--plum);animation:drive 6s ease-in-out infinite}
+@keyframes drive{0%{left:0}90%,100%{left:calc(100% - 40px)}}
+.route .maybe{stroke-dasharray:3 7;opacity:.55}
+@media (max-width:960px){.flow-track,.parcel,.truck{display:none}.flow-wrap{padding-top:0}.mbars{height:170px}}
+
+/* schemes */
+.schemes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:56px}
+.sc{border:1px solid var(--line);border-radius:16px;padding:26px;display:grid;gap:12px;align-content:start;background:var(--bg)}
+.sc .when-tag{justify-self:start;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:99px}
+.sc p{color:var(--ink2);font-size:16px}
+.sc .k{font:400 30px/1 var(--display);color:var(--ink)}
+.sc .k small{font:500 14px var(--body);color:var(--muted);margin-left:6px}
+
+.flow-steps{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;counter-reset:s}
+.fs{background:var(--panel);border-radius:12px;padding:18px 14px 16px;display:grid;gap:8px;align-content:start;border-top:3px solid var(--bar)}
+.fs::before{counter-increment:s;content:counter(s,decimal-leading-zero);font:500 12px/1 var(--mono);color:var(--muted)}
+.fs h3{font-size:15px}
+.fs p{font-size:14px;color:var(--ink2);line-height:1.45}
+.fs.b{border-top-color:var(--accent)} .fs.p{border-top-color:var(--plum)} .fs.a{border-top-color:var(--bar)}
+.legend-line{display:flex;gap:20px;flex-wrap:wrap;margin-top:18px;font-size:14px;color:var(--ink2)}
+.legend-line i{display:inline-block;width:14px;height:4px;border-radius:2px;vertical-align:3px;margin-right:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.panel{background:var(--panel);border-radius:16px;padding:28px;display:grid;gap:12px;align-content:start}
+.panel p{color:var(--ink2)}
+.tag{justify-self:start;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent)}
+.tag.t{background:var(--teal-soft);color:var(--teal)}
+.tag.p{background:var(--plum-soft);color:var(--plum)}
+
+/* hbars */
+.chartbox{border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;gap:18px}
+.hbars{display:grid;gap:14px}
+.hb{display:grid;grid-template-columns:220px 1fr 92px;gap:16px;align-items:center}
+.hb .k{font-size:15px;color:var(--ink2)}
+.hb .k b{display:block;color:var(--ink);font-weight:600}
+.hb .track{height:28px}
+.hb .bar{height:100%;width:var(--w);background:var(--bar);border-radius:0 4px 4px 0;transform-origin:left}
+.hb.us .bar{background:var(--teal)}
+.hb .v{font:500 15px/1 var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.play .bar{animation:grow 1.1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.chart-cap{font-size:14px;color:var(--muted)}
+.divider{height:1px;background:var(--line);margin-block:6px}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:1fr 1.1fr;gap:24px}
+.ctrl{display:grid;gap:28px;align-content:start}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--panel);padding:5px;border-radius:12px}
+.seg button{all:unset;cursor:pointer;text-align:center;padding:10px 6px;border-radius:9px;font-size:14px;color:var(--ink2);display:grid;gap:2px}
+.seg button b{font:600 15px/1.2 var(--body);color:var(--ink)}
+.seg button[aria-pressed="true"]{background:#FFFFFF;box-shadow:inset 0 0 0 1.5px #B08A34}
+.seg button:focus-visible{outline:2px solid var(--accent)}
+.lb{font-size:14px;color:var(--muted);display:block;margin-bottom:10px}
+.ordval{font:400 44px/1 var(--display);font-variant-numeric:tabular-nums}
+.ordval small{font:500 15px var(--body);color:var(--muted);margin-left:8px}
+input[type=range]{width:100%;accent-color:var(--accent);margin-top:14px;height:28px}
+.ticks{display:flex;justify-content:space-between;font:500 12px var(--mono);color:var(--muted)}
+.presets{display:flex;gap:8px;flex-wrap:wrap}
+.presets button{all:unset;cursor:pointer;font-size:13px;padding:7px 12px;border:1px solid var(--line);border-radius:99px;color:var(--ink2)}
+.presets button:hover{border-color:var(--accent);color:var(--ink)}
+.out{background:#0A1725;color:#EDF2F9;border-radius:18px;padding:32px;display:grid;gap:22px;align-content:start}
+.out .big{display:grid;gap:6px}
+.out .big span{font-size:14px;opacity:.75}
+.out .big b{font:400 clamp(40px,5.4vw,60px)/1 var(--display);color:#B08A34;font-variant-numeric:tabular-nums}
+.out .row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:20px;border-top:1px solid rgba(232,238,240,.18)}
+.out .row div{display:grid;gap:4px}
+.out .row span{font-size:13px;opacity:.75}
+.out .row b{font:600 20px/1.2 var(--body);font-variant-numeric:tabular-nums}
+.out p{font-size:13px;opacity:.7}
+
+.years{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.yr{border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;gap:14px;align-content:start}
+.yr .ph{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.yr h3{font-size:21px}
+.yr .col{height:180px;display:flex;align-items:flex-end;border-bottom:1px solid var(--line)}
+.yr .col div{width:100%;height:var(--h);min-height:3px;background:var(--teal);border-radius:4px 4px 0 0;transform-origin:bottom}
+.play .yr .col div{animation:rise 1.2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:scaleY(0)}}
+.yr dl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin:0;font-size:15px}
+.yr dt{color:var(--ink2)} .yr dd{margin:0;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.yr dd.p{color:var(--accent);font:400 20px/1.2 var(--display)}
+
+/* timeline */
+.tl-item{display:grid;grid-template-columns:150px 1fr;gap:32px;padding-block:32px;border-top:1px solid var(--line)}
+.tl-item:first-child{border-top:0;padding-top:0}
+.when{display:grid;gap:6px;align-content:start}
+.when b{font:400 22px/1.1 var(--display)}
+.when span{font:500 12px/1.3 var(--mono);color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.tl-body{display:grid;gap:14px}
+.tl-body h3{font-size:20px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.split .panel{padding:22px}
+.split h4{margin:0;font:600 15px/1.3 var(--body)}
+.chk{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.split .chk{grid-template-columns:1fr}
+.chk li{position:relative;padding-left:22px;color:var(--ink2);font-size:16px}
+.chk li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--accent)}
+
+/* people */
+.people{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.person{border:1px solid var(--line);border-radius:18px;padding:30px;display:grid;gap:18px;align-content:start}
+.person header{display:flex;gap:16px;align-items:center}
+.av{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--teal-soft);color:var(--teal);flex:none}
+.av.a{background:var(--accent-soft);color:var(--accent)}
+.av svg{width:26px;height:26px}
+.person header div{display:grid;gap:2px}
+.person header small{font:500 12px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.duty{display:grid;gap:14px}
+.duty div{display:grid;grid-template-columns:28px 1fr;gap:10px}
+.duty i{font:500 12px/1.6 var(--mono);color:var(--muted);font-style:normal}
+.duty b{font-weight:600}
+.duty p{font-size:15px;color:var(--ink2);line-height:1.5}
+
+.auto{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.au{background:var(--panel);border-radius:14px;padding:18px;display:grid;gap:8px;align-content:start}
+.au .fr{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.au.later{background:var(--bg);border:1px dashed var(--bar)}
+.au.later .fr{color:var(--muted)}
+.au b{font-weight:600;font-size:16px;line-height:1.3}
+.au p{font-size:14px;color:var(--ink2);line-height:1.45}
+
+/* team */
+.grow{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.gcol{padding:26px 22px;display:grid;gap:16px;align-content:start;border-left:1px solid var(--line)}
+.gcol:first-child{border-left:0;background:var(--panel)}
+.gcol .when b{font-size:18px}
+.dots{display:flex;gap:6px;flex-wrap:wrap;min-height:30px;align-items:center}
+.dots i{width:26px;height:26px;border-radius:50%;background:var(--teal)}
+.dots i.a{background:var(--accent)} .dots i.p{background:var(--plum)}
+.dots i.n{background:transparent;border:2px dashed var(--muted)}
+.dots em{font:500 13px var(--mono);color:var(--muted);font-style:normal;margin-left:4px}
+.gcol ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:15px;color:var(--ink2)}
+.gcol li b{color:var(--ink);font-weight:600}
+.lg{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:8px}
+
+/* delivery */
+.del{display:grid;grid-template-columns:repeat(4,1fr)}
+.dstep{padding:0 18px 0 0;display:grid;gap:12px;align-content:start;position:relative}
+.dstep .ic{width:56px;height:56px;border-radius:50%;background:#FFFFFF;border:2px solid var(--plum);display:grid;place-items:center;color:var(--plum);position:relative;z-index:1}
+.dstep .ic svg{width:26px;height:26px}
+.dstep::after{content:"";position:absolute;top:28px;left:56px;right:0;height:2px;background:repeating-linear-gradient(90deg,var(--plum) 0 6px,transparent 6px 12px)}
+.dstep:last-child::after{display:none}
+.dstep p{font-size:15px;color:var(--ink2)}
+
+/* growth plan */
+.gp{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:16px;align-items:stretch}
+.gp .arrow{display:grid;place-items:center;color:var(--accent)}
+.gp .arrow svg{width:34px;height:34px}
+.mx{display:flex;align-items:flex-end;gap:10px;height:90px;margin-top:6px}
+.mx div{flex:1;background:var(--teal);border-radius:4px 4px 0 0;display:flex;align-items:flex-start;justify-content:center;color:#fff;font:600 13px/1 var(--mono);padding-top:8px}
+.mx div:first-child{background:var(--bar);color:var(--ink)}
+
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:16px}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th,td{text-align:left;padding:18px 22px;border-top:1px solid var(--line);vertical-align:top;font-size:16px}
+thead th{border-top:0;font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+td:first-child{font-weight:600;width:26%}
+td{color:var(--ink2)}
+
+.close{border-bottom:0;background:var(--panel)}
+.close h2{max-width:22ch;margin-top:16px}
+.close .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.close .steps div{border-top:2px solid var(--accent);padding-top:16px;display:grid;gap:8px}
+.close .steps b{font:500 17px/1.3 var(--display)}
+.close .steps p{font-size:15px;color:var(--ink2)}
+.fine{margin-top:56px;font-size:13px;color:var(--muted);max-width:90ch}
+
+.stat b,.ordval,.out .big b,.yr dd.p,.sc .k,.mbars div,.hb .v{font-family:var(--body)!important;font-weight:700!important;letter-spacing:-.02em}
+.rv.in{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
+.fs.rv.in{animation:up .8s cubic-bezier(.2,.7,.2,1) both,pulse 7s .8s infinite}
+.fs.rv.in{animation-delay:0s,calc(var(--i) * 1s + .8s)}
+@keyframes up{from{transform:translateY(22px);opacity:.25}}
+
+@media (max-width:960px){
+  .hero-grid,.calc,.two,.people,.split{grid-template-columns:1fr}
+  .schemes{grid-template-columns:1fr}
+  .flow-steps{grid-template-columns:repeat(2,1fr)}
+  .auto{grid-template-columns:repeat(2,1fr)}
+  .grow{grid-template-columns:1fr 1fr}
+  .gcol:nth-child(3){border-left:0}
+  .gcol:nth-child(n+3){border-top:1px solid var(--line)}
+  .years{grid-template-columns:1fr}
+  .yr .col{height:120px}
+  .del{grid-template-columns:1fr 1fr;row-gap:32px}
+  .dstep:nth-child(2)::after{display:none}
+  .gp{grid-template-columns:1fr}
+  .gp .arrow{transform:rotate(90deg)}
+  .close .steps{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding-inline:16px}
+  section{padding-block:64px}
+  .stats{grid-template-columns:1fr}
+  .flow-steps,.auto,.grow,.del{grid-template-columns:1fr}
+  .gcol{border-left:0;border-top:1px solid var(--line)}
+  .gcol:first-child{border-top:0}
+  .dstep::after{display:none}
+  .hb{grid-template-columns:1fr 80px;gap:6px 12px}
+  .hb .k{grid-column:1/-1}
+  .tl-item{grid-template-columns:1fr;gap:12px}
+  .chk{grid-template-columns:1fr}
+  .out .row{grid-template-columns:1fr}
+  .nav ul{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Розділи">
+  <div class="wrap">
+    <a class="back" href="index.html" aria-label="ORBITA IX — на головну"><span>←</span><img src="img/logo-light.png" alt="ORBITA IX" width="88" height="22"></a>
+    <ul>
+      <li><a href="#schemes">Схеми</a></li>
+      <li><a href="#market">Ринок</a></li>
+      <li><a href="#money">Заробіток</a></li>
+      <li><a href="#launch">Запуск</a></li>
+      <li><a href="#work">Робота</a></li>
+      <li><a href="#team">Команда</a></li>
+      <li><a href="#delivery">Доставка</a></li>
+      <li><a href="#growth">Ріст</a></li>
+      <li><a href="#risks">Ризики</a></li>
+    </ul>
+    <div class="langsw"><b>UA</b><a href="amazon-en.html">EN</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">ORBITA IX · Проєкт Amazon</div>
+        <h1>Магазин на Amazon: старт у <em>Мексиці та&nbsp;Канаді</em></h1>
+        <p class="lead">Пропонуємо запустити магазин, який продає брендові товари постачальників Amazon покупцям у Мексиці та Канаді, з подальшим виходом на інші ринки. У нашій команді є люди, які запускали цю модель і працюють з нею: технічна система щодня передає ціни й наявність, а відділ брендів і захисту акаунта відкриває бренди і тримає магазин у здоровому стані.</p>
+      </div>
+      <svg class="route" viewBox="0 0 600 380" role="img" aria-label="Схема: товари постачальників Amazon через нашу систему потрапляють на ринки Мексики та Канади, Бразилія досліджується">
+        <path class="path" d="M150 190 C 240 190, 250 70, 380 70"/>
+        <path class="path" d="M150 190 C 250 190, 290 190, 380 190"/>
+        <path class="path" d="M150 190 C 240 190, 250 310, 380 310"/>
+        <path class="flow" d="M150 190 C 240 190, 250 70, 380 70"/>
+        <path class="flow maybe" d="M150 190 C 250 190, 290 190, 380 190" style="animation-delay:-.5s"/>
+        <path class="flow" d="M150 190 C 240 190, 250 310, 380 310" style="animation-delay:-1s"/>
+        <circle r="5" fill="#B08A34"><animateMotion dur="3.2s" repeatCount="indefinite" path="M150 190 C 240 190, 250 70, 380 70"/></circle>
+                <circle r="5" fill="#B08A34"><animateMotion dur="3.6s" begin="-2s" repeatCount="indefinite" path="M150 190 C 240 190, 250 310, 380 310"/></circle>
+        <rect x="4" y="150" width="146" height="80" rx="14" fill="#F6F2E9" stroke="#E4DCCB"/>
+        <text class="lbl" x="77" y="186" text-anchor="middle" style="font-size:13px">Постачальники</text>
+        <text x="77" y="208" text-anchor="middle">на Amazon</text>
+        <rect x="222" y="166" width="92" height="48" rx="12" fill="#0E1F31"/>
+        <text x="268" y="187" text-anchor="middle" style="fill:#FFFFFF;font-size:12px">наша</text>
+        <text x="268" y="203" text-anchor="middle" style="fill:#FFFFFF;font-size:12px">система</text>
+        <g>
+          <circle cx="398" cy="70" r="22" fill="#F3EAD5" stroke="#B08A34" stroke-width="2"/>
+          <text x="398" y="75" text-anchor="middle" style="font-family:var(--mono);font-size:12px;fill:#B08A34">MX</text>
+          <text class="lbl" x="432" y="66">Мексика</text><text x="432" y="86">amazon.com.mx</text>
+        </g>
+        <g>
+          <circle cx="398" cy="190" r="22" fill="#FFFFFF" stroke="#C9C1AE" stroke-width="2" stroke-dasharray="4 4"/>
+          <text x="398" y="195" text-anchor="middle" style="font-family:var(--mono);font-size:12px;fill:#8A8578">BR</text>
+          <text class="lbl" x="432" y="186" style="fill:#8A8578">Бразилія</text><text x="432" y="206">досліджуємо</text>
+        </g>
+        <g>
+          <circle cx="398" cy="310" r="22" fill="#F3EAD5" stroke="#B08A34" stroke-width="2"/>
+          <text x="398" y="315" text-anchor="middle" style="font-family:var(--mono);font-size:12px;fill:#B08A34">CA</text>
+          <text class="lbl" x="432" y="306">Канада</text><text x="432" y="326">amazon.ca</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="stats">
+      <div class="stat acc"><b class="num" data-count="13.8" data-dec="1" data-pre="$" data-suf=" млн">$13,8 млн</b><span>сума замовлень за 6 місяців в одного з магазинів, що працює за цією моделлю, близько $75 тис. замовлень на день</span></div>
+      <div class="stat"><b class="num" data-count="12500">12 500</b><span>замовлень на місяць в одного з конкурентів, яких ми дослідили</span></div>
+      <div class="stat"><b class="num">$15–40<sup>*</sup></b><span>орієнтовний прибуток з одного проданого товару, залежно від ціни товару</span></div>
+    </div>
+    <p class="note">Сума замовлень показує, на скільки покупці замовили товарів, до вирахування закупівлі, комісій Amazon і доставки. Це не прибуток. <sup>*</sup>Прибуток з одного товару залежить від вартості доставки: схема доставки ще налаштовується, тому цифри орієнтовні.</p>
+  </div>
+</header>
+
+<section id="schemes" class="tint-b">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Схеми продажу</div>
+      <h2>Як ми продаємо на Amazon</h2>
+      <p class="lead">Ми виставляємо на Amazon товари відомих брендів від постачальників Amazon і викуповуємо товар під конкретне замовлення покупця. Склад-посередник потрібен з першого дня: туди приходять посилки, там їх перепаковують і відправляють покупцям. Починаємо зі схеми, яка дає перші продажі, і поступово додаємо ті, що дають більшу маржу.</p>
+    </div>
+
+    <div class="schemes">
+      <div class="sc rv">
+        <span class="when-tag" style="background:var(--accent-soft);color:var(--accent)">Старт · перші продажі на 2–3 місяці</span>
+        <h3>Приєднання до наявних карток</h3>
+        <p>Товар уже має картку на Amazon у цьому регіоні: фото, опис і відгуки є. Ми додаємо до неї свою пропозицію з нашою ціною, а система щодня тримає ціну й наявність актуальними. Контент створювати не потрібно, тому саме ця схема дає перші продажі після місяця підготовки.</p>
+      </div>
+      <div class="sc rv">
+        <span class="when-tag" style="background:var(--teal-soft);color:var(--teal)">Другий етап</span>
+        <h3>Створення нових карток</h3>
+        <p>Виставляємо товари в регіонах, де їх ще немає. Для кожної картки готуємо контент: підбираємо або генеруємо фото, пишемо назву, опис і характеристики. На власній картці менше конкуренції, а ціну визначаємо ми.</p>
+      </div>
+      <div class="sc rv">
+        <span class="when-tag" style="background:var(--plum-soft);color:var(--plum)">Паралельно, після запуску</span>
+        <h3>Прямі постачальники</h3>
+        <div class="k">×2…×5+<small>маржа</small></div>
+        <p>Домовляємось напряму з постачальниками брендів, що вже продаються, про кращі закупівельні ціни. Маржа може бути в рази вищою, ніж на старті: у 2, 3, 5 разів і більше, залежно від домовленостей і обсягів.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom:20px">Шлях кожного товару</h3>
+    <div class="flow-wrap">
+    <div class="flow-track" aria-hidden="true"><svg class="parcel" viewBox="0 0 24 24" fill="#F3EAD5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l8 4v10l-8 4-8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10" fill="none"/></svg></div>
+    <div class="flow-steps">
+      <div class="fs b rv" style="--i:0"><h3>Аналіз ринку</h3><p>Обираємо бренди з попитом і без зайвих обмежень</p></div>
+      <div class="fs t rv" style="--i:1"><h3>Збір даних</h3><p>Ціни, наявність, фото й характеристики від постачальників Amazon</p></div>
+      <div class="fs pr rv" style="--i:2"><h3>Ціна</h3><p>Правила задають бренди, розраховує система: собівартість, доставка, комісія, маржа</p></div>
+      <div class="fs t rv" style="--i:3"><h3>Картка товару</h3><p>Приєднуємось до картки або створюємо нову</p></div>
+      <div class="fs p rv" style="--i:4"><h3>Замовлення</h3><p>Покупець у Мексиці чи Канаді оплачує товар</p></div>
+      <div class="fs p rv" style="--i:5"><h3>Викуп і відправка</h3><p>Викуповуємо товар, склад-посередник перепаковує й відправляє</p></div>
+      <div class="fs a rv" style="--i:6"><h3>Виплата</h3><p>Amazon перераховує кошти через 30+ днів після продажу</p></div>
+    </div>
+    </div>
+    <div class="legend-line"><span><i style="background:var(--accent)"></i>бренди та захист акаунта</span><span><i style="background:var(--teal)"></i>технічний відділ</span><span><i style="background:var(--plum)"></i>закупівлі та доставка</span><span><i style="background:var(--bar)"></i>Amazon</span></div>
+
+    <div class="two">
+      <div class="panel rv">
+        <span class="tag t">Як це масштабується</span>
+        <h3>Система і команда ростуть разом</h3>
+        <p>Рутину бере на себе система: збирає дані, рахує ціни, щодня оновлює наявність. Але чим більше товарів і брендів, тим більше людей потрібно, щоб кожен контролював свою ділянку роботи. Тому команда росте разом з асортиментом і продажами, а її зростання оплачується прибутком магазину.</p>
+      </div>
+      <div class="panel rv">
+        <span class="tag">Чому ці ринки</span>
+        <h3>Мексика і Канада першими</h3>
+        <p>Саме тут працюють конкуренти, які вже заробляють на цій моделі: в одного з них 64% продажів припадає на Мексику. Один акаунт продавця Amazon відкриває доступ до кількох ринків, тож наступний ринок не вимагає нового магазину з нуля. Бразилія поки під питанням: досліджуємо обмеження, які там зараз діють. Далі розширюємось на інші ринки: Amazon працює майже у двох десятках країн.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="market" class="tint-a">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Ринок</div>
+      <h2>Інші компанії вже заробляють на цій моделі</h2>
+      <p class="lead">Ми дослідили конкурентів на цих майданчиках: у них мільйони товарів і тисячі замовлень щомісяця. Наша ціль на третій рік наближається до рівня найбільшого з них.</p>
+    </div>
+
+    <div class="chartbox">
+      <h3>Замовлень на місяць</h3>
+      <div class="hbars" id="hbars">
+        <div class="hb"><div class="k"><b>Найбільший конкурент</b>9,1 млн товарів, 64% продажів у Мексиці</div><div class="track"><div class="bar" style="--w:100%"></div></div><div class="v" data-count="12500">12 500</div></div>
+        <div class="hb"><div class="k"><b>Менший конкурент</b>2,1 млн товарів, лише Мексика й Канада</div><div class="track"><div class="bar" style="--w:16%"></div></div><div class="v" data-count="2000">2 000</div></div>
+        <div class="divider"></div>
+        <div class="hb us"><div class="k"><b>Наша ціль, рік 3</b>капіталізація</div><div class="track"><div class="bar" style="--w:80%"></div></div><div class="v">до 10 000</div></div>
+        <div class="hb us"><div class="k"><b>Наша ціль, рік 2</b>масштаб</div><div class="track"><div class="bar" style="--w:24%"></div></div><div class="v">до 3 000</div></div>
+        <div class="hb us"><div class="k"><b>Наша ціль, рік 1</b>фундамент</div><div class="track"><div class="bar" style="--w:2.4%"></div></div><div class="v">до 300</div></div>
+      </div>
+      <p class="chart-cap">Показники конкурентів орієнтовні, з нашого дослідження ринку. Усі рядки в одній шкалі.</p>
+    </div>
+
+    <div class="two">
+      <div class="panel rv">
+        <span class="tag">Що видно з ринку</span>
+        <h3>Конкуренти ростуть кількістю, а не якістю</h3>
+        <p>У найбільшого конкурента понад 1,6 млн неактивних або незавершених карток товарів. Менший конкурент отримує масові блокування через безсистемне додавання товарів. Обидві проблеми закриваються фільтрами на вході та щоденним контролем.</p>
+      </div>
+      <div class="panel rv">
+        <span class="tag t">Наш підхід</span>
+        <h3>Менше товарів, кращий відбір</h3>
+        <p>Заходимо брендами, перевіреними за попитом, торговими марками та обмеженнями. Кожна картка проходить фільтр заборонених слів і категорій. Здоровий акаунт дозволяє відкривати нові бренди швидше за конкурентів.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="money" class="tint-b">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Заробіток</div>
+      <h2>Скільки можна заробити</h2>
+      <p class="lead">Прибуток рахується просто: кількість замовлень помножена на прибуток з одного товару. Оберіть ціновий сегмент і обсяг, щоб побачити результат на місяць.</p>
+    </div>
+
+    <div class="calc">
+      <div class="ctrl">
+        <div>
+          <span class="lb" id="seg-l">Ціновий сегмент товарів</span>
+          <div class="seg" role="group" aria-labelledby="seg-l">
+            <button type="button" id="t0" data-t="0" aria-pressed="false"><b>до $30</b>~$15 з товару</button>
+            <button type="button" id="t1" data-t="1" aria-pressed="true"><b>$30–50</b>~$25 з товару</button>
+            <button type="button" id="t2" data-t="2" aria-pressed="false"><b>$50–100</b>~$40 з товару</button>
+          </div>
+        </div>
+        <div>
+          <label class="lb" for="ord">Замовлень на місяць</label>
+          <div class="ordval num"><span id="ordv">1 000</span><small>замовлень</small></div>
+          <input type="range" id="ord" min="0" max="1000" step="1" value="500">
+          <div class="ticks"><span>50</span><span>300</span><span>1 000</span><span>3 000</span><span>10 000</span></div>
+        </div>
+        <div>
+          <span class="lb">Етапи з бізнес-плану</span>
+          <div class="presets">
+            <button type="button" data-o="300">Рік 1 · 300</button>
+            <button type="button" data-o="3000">Рік 2 · 3 000</button>
+            <button type="button" data-o="10000">Рік 3 · 10 000</button>
+          </div>
+        </div>
+      </div>
+      <div class="out" aria-live="polite">
+        <div class="big"><span>Прибуток з продажів на місяць</span><b id="pm">$25 000</b></div>
+        <div class="row">
+          <div><span>На рік</span><b id="py">$300 000</b></div>
+          <div><span>Оборот на місяць</span><b id="tm">$40 000</b></div>
+          <div><span>Оборотний капітал</span><b id="wc">$40 000</b></div>
+        </div>
+        <p>Прибуток показано до витрат на команду та систему. Прибуток з одного товару залежить від вартості доставки, яка ще уточнюється. Оборотний капітал означає закупівлі щонайменше одного місяця наперед, бо Amazon виплачує кошти через 30+ днів після продажу. Ці гроші не витрачаються, а щомісяця обертаються в товарі.</p>
+      </div>
+    </div>
+
+    <div class="years" id="years">
+      <div class="yr rv">
+        <div class="ph">Рік 1 · фундамент</div>
+        <h3>70–300 замовлень на місяць</h3>
+        <div class="col"><div style="--h:2.8%"></div></div>
+        <dl><dt>Замовлень за рік</dt><dd>~2 500</dd><dt>Прибуток з продажів</dt><dd class="p" data-y="2500">$62 500</dd></dl>
+      </div>
+      <div class="yr rv">
+        <div class="ph">Рік 2 · масштаб</div>
+        <h3>1 000–3 000 замовлень на місяць</h3>
+        <div class="col"><div style="--h:26.7%"></div></div>
+        <dl><dt>Замовлень за рік</dt><dd>~24 000</dd><dt>Прибуток з продажів</dt><dd class="p" data-y="24000">$600 000</dd></dl>
+      </div>
+      <div class="yr rv">
+        <div class="ph">Рік 3 · капіталізація</div>
+        <h3>5 000–10 000+ замовлень на місяць</h3>
+        <div class="col"><div style="--h:100%"></div></div>
+        <dl><dt>Замовлень за рік</dt><dd>~90 000</dd><dt>Прибуток з продажів</dt><dd class="p" data-y="90000">$2,25 млн</dd></dl>
+      </div>
+    </div>
+    <p class="chart-cap" style="margin-top:18px">Стовпчики показують кількість замовлень за рік в одній шкалі. Прибуток перераховується за обраним вище сегментом. Темп переходу між етапами залежить від обсягу інвестицій і швидкості відкриття брендів. На третій рік магазин стає ліквідним активом, який можна продати.</p>
+  </div>
+</section>
+
+<section id="launch">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Запуск</div>
+      <h2>Від підготовки до перших продажів</h2>
+      <p class="lead">Перший місяць готуємо компанію, магазин, склад-посередник, систему і перші бренди. Далі перевіряємо, як перші товари проходять увесь шлях від замовлення до доставки, і лише після цього масштабуємось.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-item rv">
+        <div class="when"><span>Місяць 1</span><b>Підготовка</b></div>
+        <div class="tl-body">
+          <div class="split">
+            <div class="panel">
+              <span class="tag p">Посередник або власник компанії</span>
+              <ul class="chk">
+                <li>Реєстрація компанії та податкових профілів</li>
+                <li>Відкриття акаунта продавця і проходження перевірок Amazon</li>
+                <li>Підключення платіжних систем для виплат</li>
+              </ul>
+              <p style="font-size:15px">Це робить людина, на яку реєструється компанія, або компанія-посередник, що надає такі послуги. Наприклад, Вестерн Бід відкриває компанію в США. Це разова послуга, далі той самий посередник працює як наш склад. Ми готуємо інструкції та супроводжуємо процес.</p>
+            </div>
+            <div class="panel">
+              <span class="tag t">Робимо ми</span>
+              <ul class="chk">
+                <li>Аналіз ринку: які бренди зараз мають попит</li>
+                <li>Налаштування технічної системи</li>
+                <li>Списки заборонених слів, брендів і категорій</li>
+                <li>Подання перших брендів на відкриття</li>
+                <li>Перші товари в магазині</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item rv">
+        <div class="when"><span>Місяці 2–3</span><b>Перші продажі</b></div>
+        <div class="tl-body">
+          <h3>Перевіряємо модель на реальних замовленнях</h3>
+          <ul class="chk">
+            <li>Перші замовлення, викуп і доставка покупцям</li>
+            <li>Підбір ціни: де товар продається, де ні</li>
+            <li>Відкриття нових брендів щотижня</li>
+            <li>Аналіз брендів на 30-й день: що лишаємо, що прибираємо</li>
+            <li>Запуск реклами всередині Amazon</li>
+            <li>Налаштування схеми доставки і її вартості</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item rv">
+        <div class="when"><span>З місяця 4</span><b>Масштаб</b></div>
+        <div class="tl-body">
+          <h3>Більше брендів, товарів і людей</h3>
+          <ul class="chk">
+            <li>Посилення команди за темпом замовлень</li>
+            <li>Створення нових карток у регіонах, де товару ще немає</li>
+            <li>Пошук прямих постачальників і робота з ними</li>
+            <li>Автоматичний викуп і сигнали про стан акаунта</li>
+            <li>Більше брендів і постачальників у системі</li>
+            <li>Вихід на нові ринки та напрямки</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="tint-a">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Хто що робить</div>
+      <h2>Технічний відділ і відділ брендів та захисту акаунта</h2>
+      <p class="lead">Система, яка щодня передає ціни й кількість тисяч товарів, зберігає великі обсяги даних і має бути правильно налаштована та проіндексована. Тому з першого дня в технічному відділі дві людини: керівник напряму і технічний помічник, щоб усе працювало без перерв сім днів на тиждень. Бренди, юридичні питання і стан акаунта веде окремий відділ.</p>
+    </div>
+
+    <div class="people">
+      <div class="person rv">
+        <header><div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9l2 2-2 2M12 13h4"/></svg></div><div><small>Технічний відділ · керівник і помічник</small><h3>Дані, картки, оновлення, доступи</h3></div></header>
+        <div class="duty">
+          <div><i>01</i><p><b>Збір даних від постачальників Amazon.</b> Регулярно збирає ціни, кількість, фото й характеристики кожного товару.</p></div>
+          <div><i>02</i><p><b>Сховище даних.</b> Система зберігає мільйони записів про товари й ціни. Вона має бути правильно налаштована та проіндексована, щоб працювати швидко.</p></div>
+          <div><i>03</i><p><b>Розрахунок цін.</b> Автоматично рахує ціну під кожен ринок за погодженими правилами ціноутворення.</p></div>
+          <div><i>04</i><p><b>Фільтри.</b> Технічно перевіряє кожен товар за списками заборонених слів, брендів і категорій.</p></div>
+          <div><i>05</i><p><b>Картки товарів.</b> Масово приєднує пропозиції до наявних карток і створює нові з підготовленим контентом через програмний доступ Amazon, виправляє помилки завантаження.</p></div>
+          <div><i>06</i><p><b>Щоденне оновлення.</b> Стежить, щоб ціни й залишки в магазині щодня збігались із постачальником. Інакше з'являються скасовані замовлення і продажі в мінус.</p></div>
+          <div><i>07</i><p><b>Доступи.</b> Підтримує доступ системи до акаунтів. Ключі програмного доступу Amazon треба оновлювати кожні 180 днів, інакше система зупиняється.</p></div>
+        </div>
+      </div>
+      <div class="person rv">
+        <header><div class="av a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div><small>Бренди та захист акаунта · керівник напряму</small><h3>Бренди, юридичний супровід, здоров'я акаунта</h3></div></header>
+        <div class="duty">
+          <div><i>01</i><p><b>Аналіз ринку та брендів.</b> Відбирає бренди з попитом за рейтингом продажів, перевіряє обмеження та небезпечні товари.</p></div>
+          <div><i>02</i><p><b>Відкриття брендів.</b> 5–10 нових брендів на тиждень: перевірка торгових марок, підготовка інвойсів, подання на дозвіл продавати.</p></div>
+          <div><i>03</i><p><b>Правила ціни.</b> Задає правила ціноутворення разом з технічним відділом і вирішує, які бренди та товари виставляємо.</p></div>
+          <div><i>04</i><p><b>Розбір обмежень.</b> Щодня розбирає товари, які чекають дозволу. Цикл відкриття бренду займає 7–10 днів.</p></div>
+          <div><i>05</i><p><b>Здоров'я акаунта.</b> Перевіряє показники двічі на день. Якщо рейтинг здоров'я падає нижче 200, Amazon блокує відкриття нових брендів.</p></div>
+          <div><i>06</i><p><b>Юридичний супровід.</b> Апеляції на блокування товарів, перевірка скарг правовласників, торгові марки, інвойси та документи. За потреби бренд тимчасово зупиняємо.</p></div>
+          <div><i>07</i><p><b>Інструкції та нові ринки.</b> Готує інструкції для реєстрації компанії й магазину, допомагає запускатися на кожному наступному майданчику.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px">Автоматизації, які будуємо</h3>
+    <div class="auto">
+      <div class="au rv"><span class="fr">щодня</span><b>Збір цін і залишків</b><p>Оновлення даних від постачальників Amazon за розкладом</p></div>
+      <div class="au rv"><span class="fr">щодня</span><b>Перерахунок цін</b><p>Нова ціна при зміні собівартості, курсу чи комісії</p></div>
+      <div class="au rv"><span class="fr">щодня</span><b>Синхронізація магазину</b><p>Ціни й кількість передаються в Amazon автоматично</p></div>
+      <div class="au rv"><span class="fr">при завантаженні</span><b>Перевірка заборонених слів</b><p>Товар з ризиковим словом чи брендом не потрапляє в магазин</p></div>
+      <div class="au rv"><span class="fr">щотижня</span><b>Звіти про продажі</b><p>Що продається, що ні, які бренди тягнуть магазин</p></div>
+      <div class="au rv"><span class="fr">раз на 180 днів</span><b>Оновлення ключів доступу</b><p>Нагадування й заміна ключів до програмного доступу</p></div>
+      <div class="au later rv"><span class="fr">після 3 місяців</span><b>Замовлення на викуп</b><p>Нове замовлення одразу формує задачу на закупівлю</p></div>
+      <div class="au later rv"><span class="fr">після 3 місяців</span><b>Сигнали про стан акаунта</b><p>Повідомлення про нові скарги, блокування, падіння рейтингу</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Команда</div>
+      <h2>Чотири людини на старті, далі ріст за темпом замовлень</h2>
+      <p class="lead">Кожну функцію з першого дня виконує окрема людина: одна людина всього не встигне, а контроль потрібен щодня. Коли система запрацює і замовлення почнуть рости, команду посилюємо там, де бракує рук.</p>
+    </div>
+    <div class="grow">
+      <div class="gcol rv">
+        <div class="when"><span>Місяць 1</span><b>Старт</b></div>
+        <div class="dots" aria-label="4 людини"><i></i><i></i><i class="a"></i><i class="p"></i><em>4</em></div>
+        <ul><li><b>Технічний відділ:</b> керівник напряму і технічний помічник</li><li><b>Бренди та захист акаунта:</b> керівник напряму</li><li><b>Закупівлі:</b> викуп, листування, контроль посилок</li></ul>
+      </div>
+      <div class="gcol rv">
+        <div class="when"><span>Місяці 2–3</span><b>Маркетинг</b></div>
+        <div class="dots" aria-label="4 людини і маркетинг"><i class="a"></i><i></i><i></i><i class="p"></i><i class="n"></i></div>
+        <ul><li><b>Реклама всередині Amazon:</b> запускаємо на товари, що вже продаються</li><li>Спершу без окремої людини на цьому місці</li></ul>
+      </div>
+      <div class="gcol rv">
+        <div class="when"><span>Місяці 4–6</span><b>Посилення</b></div>
+        <div class="dots" aria-label="команда посилюється"><i class="a"></i><i class="n"></i><i></i><i></i><i class="n"></i><i class="p"></i></div>
+        <ul><li>Дивимось, як пішли замовлення, і додаємо людей туди, де бракує рук</li><li>Якщо замовлення ростуть швидко, посилюємось раніше, щоб ніде не просідати</li></ul>
+      </div>
+      <div class="gcol rv">
+        <div class="when"><span>Масштаб</span><b>До 10 людей</b></div>
+        <div class="dots" aria-label="до 10 людей"><i class="a"></i><i class="a"></i><i></i><i></i><i></i><i class="p"></i><i class="p"></i><i class="n"></i><em>10</em></div>
+        <ul><li>Перерозподіляємо ролі під обсяг магазину</li><li>Зростання команди оплачується прибутком самого магазину</li></ul>
+      </div>
+    </div>
+    <div class="legend-line"><span><i class="lg" style="background:var(--teal)"></i>технічний відділ</span><span><i class="lg" style="background:var(--accent)"></i>бренди та захист акаунта</span><span><i class="lg" style="background:var(--plum)"></i>закупівлі та доставка</span><span><i class="lg" style="border:2px dashed var(--muted)"></i>нова роль на цьому етапі</span></div>
+
+    <div class="two">
+      <div class="panel rv">
+        <span class="tag">Маркетинг</span>
+        <h3>Реклама дає багато замовлень</h3>
+        <p>Перші продажі приходять за рахунок правильно підібраного товару і ціни. Вже на другий-третій місяць запускаємо рекламу всередині Amazon на товари, що продаються, і нарощуємо її разом з асортиментом. Так кожен долар реклами працює на перевірений товар.</p>
+      </div>
+      <div class="panel rv">
+        <span class="tag t">Доступи</span>
+        <h3>Робота з акаунтами без зупинок</h3>
+        <p>Система і команда працюють з акаунтом щодня, тому доступи передаються відповідальним людям і підтримуються постійно. Технічний відділ відповідає за програмний доступ, відділ брендів і захисту акаунта за стан акаунта.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="delivery" class="tint-b">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Доставка</div>
+      <h2>Від замовлення до покупця</h2>
+      <p class="lead">Швидкість доставки впливає на рейтинг магазину. Тому з першого дня викупом займається окрема людина з нашої команди: викуповує товар, стежить, щоб він доїхав до складу-посередника і вчасно відправився покупцю. Склад-посередник (наприклад, Вестерн Бід у Маямі) товар не викуповує: він приймає нашу посилку, перепаковує й швидко відправляє її в Мексику, Канаду чи на інший ринок.</p>
+    </div>
+    <div class="del-wrap"><svg class="truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V6h11v10M14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+    <div class="del" style="padding-top:8px">
+      <div class="dstep rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11L21 7H6.2"/><circle cx="9" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg></div><h3>Замовлення</h3><p>Покупець оплачує товар на Amazon, менеджер із закупівель отримує замовлення.</p></div>
+      <div class="dstep rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13H4z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg></div><h3>Викуп</h3><p>Менеджер викуповує товар у постачальника з доставкою на склад-посередник.</p></div>
+      <div class="dstep rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v10l-8 4-8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg></div><h3>Склад</h3><p>Склад-посередник приймає нашу посилку, перепаковує й маркує її без затримок.</p></div>
+      <div class="dstep rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10M14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div><h3>Відправка</h3><p>Склад швидко відправляє посилку покупцю в Мексику, Канаду чи на інший ринок. Номер відстеження передається в Amazon, менеджер контролює доставку.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="growth">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Поступовий план росту</div>
+      <h2>Від арбітражу до прямих постачальників</h2>
+      <p class="lead">Арбітраж дає швидкий старт і показує, які бренди та напрямки реально продаються. Коли арбітраж росте, ми шукаємо прямих постачальників саме в цих напрямках і починаємо працювати з ними.</p>
+    </div>
+    <div class="gp">
+      <div class="panel rv"><span class="tag">Крок 1</span><h3>Арбітраж</h3><p>Купуємо в постачальників Amazon під замовлення. Без складу і без великих закупівель.</p></div>
+      <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+      <div class="panel rv"><span class="tag t">Крок 2</span><h3>Ріст арбітражу</h3><p>Більше брендів, нові картки, реклама. Бачимо, які напрямки дають найбільше замовлень.</p></div>
+      <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+      <div class="panel rv"><span class="tag p">Крок 3</span><h3>Прямі постачальники</h3><p>Домовляємось про кращі ціни в напрямках, що продаються. Маржа може бути в рази вищою.</p>
+      </div>
+    </div>
+    <div class="chartbox" id="mchart" style="margin-top:32px">
+      <h3>Маржа з одного товару порівняно з арбітражем</h3>
+      <div class="mbars" role="img" aria-label="Арбітраж: ×1. Прямі постачальники: ×2, ×3, ×5 і більше"><div style="--h:16%">×1</div><div style="--h:33%">×2</div><div style="--h:50%">×3</div><div class="more" style="--h:100%">×5+</div></div>
+      <div class="mlabels"><span>Арбітраж</span><span style="grid-column:span 3;border-top:2px solid var(--plum);padding-top:8px">Прямі постачальники: залежить від домовленостей</span></div>
+      <p class="chart-cap">Скільки саме, залежить від домовленостей з постачальником і обсягів продажу. Дані умовні: вартість доставки одного товару ще уточнюється.</p>
+    </div>
+    <div class="calc calc2">
+      <div class="ctrl">
+        <h3>Порахуйте прибуток з прямими постачальниками</h3>
+        <div>
+          <span class="lb" id="mul-l">Маржа порівняно з арбітражем</span>
+          <div class="seg s4" role="group" aria-labelledby="mul-l">
+            <button type="button" data-m="1" aria-pressed="false"><b>×1</b>арбітраж</button>
+            <button type="button" data-m="2" aria-pressed="true"><b>×2</b>постачальник</button>
+            <button type="button" data-m="3" aria-pressed="false"><b>×3</b>постачальник</button>
+            <button type="button" data-m="5" aria-pressed="false"><b>×5</b>постачальник</button>
+          </div>
+        </div>
+        <div>
+          <span class="lb" id="seg2-l">Ціновий сегмент товарів</span>
+          <div class="seg" role="group" aria-labelledby="seg2-l">
+            <button type="button" data-t2="0" aria-pressed="false"><b>до $30</b>~$15 з товару</button>
+            <button type="button" data-t2="1" aria-pressed="true"><b>$30–50</b>~$25 з товару</button>
+            <button type="button" data-t2="2" aria-pressed="false"><b>$50–100</b>~$40 з товару</button>
+          </div>
+        </div>
+        <div>
+          <label class="lb" for="ord2">Замовлень на місяць</label>
+          <div class="ordval num"><span id="ordv2">1 000</span><small>замовлень</small></div>
+          <input type="range" id="ord2" min="0" max="1000" step="1" value="500">
+          <div class="ticks"><span>50</span><span>300</span><span>1 000</span><span>3 000</span><span>10 000</span></div>
+        </div>
+      </div>
+      <div class="out" aria-live="polite">
+        <div class="big"><span>Прибуток з продажів на місяць</span><b id="pm2">$50 000</b></div>
+        <div class="row">
+          <div><span>З одного товару</span><b id="pu2">$50</b></div>
+          <div><span>На рік</span><b id="py2">$600 000</b></div>
+          <div><span>Більше, ніж арбітраж</span><b class="gain" id="df2">+$25 000 / міс</b></div>
+        </div>
+        <p>Розрахунок: прибуток з одного товару в арбітражі × множник маржі × кількість замовлень. Множник залежить від домовленостей з постачальником і може бути й вищим за ×5. Прибуток показано до витрат на команду та систему. Дані умовні: вартість доставки одного товару ще уточнюється.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="risks" class="tint-a">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Ризики</div>
+      <h2>Що може піти не так і як ми це закриваємо</h2>
+    </div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Ризик</th><th>Що відбувається</th><th>Як закриваємо</th></tr></thead>
+        <tbody>
+          <tr><td>Скасування замовлень</td><td>Товар закінчився або подорожчав у постачальника, а в магазині стара ціна</td><td>Щоденне автоматичне оновлення цін і залишків</td></tr>
+          <tr><td>Скарги правовласників</td><td>Бренд скаржиться на продаж свого товару</td><td>Перевірка торгових марок на вході, списки заборонених брендів, інвойси</td></tr>
+          <tr><td>Обмеження акаунта</td><td>Падіння рейтингу здоров'я зупиняє відкриття брендів</td><td>Контроль показників двічі на день, апеляції, обережний темп додавання товарів</td></tr>
+          <tr><td>Спад продажів</td><td>Попит на окремі бренди падає або росте конкуренція</td><td>Щотижневе відкриття нових брендів, аналіз на 30-й день, нові картки, реклама</td></tr>
+          <tr><td>Бразилія</td><td>Ринок зараз обмежує окремі можливості для продавців</td><td>Стартуємо з Мексики та Канади, Бразилію досліджуємо окремо</td></tr>
+          <tr><td>Вартість доставки</td><td>Схема доставки ще налаштовується, тому прибуток з одного товару орієнтовний</td><td>Налаштування схеми на перших замовленнях, прямі постачальники з кращими цінами</td></tr>
+          <tr><td>Затримка виплат</td><td>Amazon перераховує кошти через 30+ днів</td><td>Оборотний капітал на місяць закупівель, поступове нарощування обсягу</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <div class="eyebrow">Наступний крок</div>
+    <h2>Запускаємо перший магазин і доводимо модель на реальних продажах</h2>
+    <p class="lead" style="margin-top:20px">Перший місяць іде на підготовку, з другого з'являються перші продажі. Після перевірки перших товарів масштабуємо асортимент, команду і ринки.</p>
+    <div class="steps">
+      <div><b>Зустріч</b><p>Відповідаємо на питання й показуємо, як працює система.</p></div>
+      <div><b>Детальний план</b><p>Бюджет, терміни і структура компанії під обсяг інвестицій.</p></div>
+      <div><b>Старт</b><p>Реєстрація компанії, відкриття магазину, налаштування системи.</p></div>
+    </div>
+    <p class="fine">Документ має орієнтовний характер. Показники конкурентів наведено для розуміння масштабу ринку. Прибуток з продажів розраховано як кількість замовлень, помножену на орієнтовний прибуток з одиниці, без витрат на команду та систему. Прибуток з одиниці залежить від вартості доставки, яка ще уточнюється. Перші ринки — Мексика та Канада; Бразилія поки під питанням, досліджуємо обмеження, які там зараз діють. Детальний бюджет надається окремо.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var fmt=function(n){return Math.round(n).toLocaleString('uk-UA')};
+  var money=function(n){
+    if(n>=1e6){var m=n/1e6;return '$'+(m%1===0?m.toFixed(0):m.toFixed(2).replace(/0$/,'')).replace('.',',')+' млн'}
+    return '$'+fmt(n);
+  };
+  var tiers=[{p:15,c:20,a:20},{p:25,c:40,a:40},{p:40,c:75,a:75}];
+  var tier=1;
+  var ord=document.getElementById('ord');
+  var lo=Math.log(50),hi=Math.log(10000);
+  var toOrders=function(v){var n=Math.exp(lo+(hi-lo)*v/1000);return n<1000?Math.round(n/10)*10:Math.round(n/100)*100};
+  var toSlider=function(n){return Math.round((Math.log(n)-lo)/(hi-lo)*1000)};
+  function render(){
+    var n=toOrders(+ord.value),t=tiers[tier];
+    document.getElementById('ordv').textContent=fmt(n);
+    document.getElementById('pm').textContent=money(n*t.p);
+    document.getElementById('py').textContent=money(n*t.p*12);
+    document.getElementById('tm').textContent=money(n*t.a);
+    document.getElementById('wc').textContent=money(n*t.c);
+    document.querySelectorAll('.yr dd.p').forEach(function(d){d.textContent=money(+d.dataset.y*t.p)});
+  }
+  ord.value=toSlider(1000);
+  ord.addEventListener('input',render);
+  document.querySelectorAll('.seg button[data-t]').forEach(function(b){
+    b.addEventListener('click',function(){
+      tier=+b.dataset.t;
+      document.querySelectorAll('.seg button[data-t]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      render();
+    });
+  });
+  document.querySelectorAll('.presets button').forEach(function(b){
+    b.addEventListener('click',function(){ord.value=toSlider(+b.dataset.o);render()});
+  });
+  render();
+
+  var mul=2,tier2=1,ord2=document.getElementById('ord2');
+  function render2(){
+    var n=toOrders(+ord2.value),u=tiers[tier2].p,pu=u*mul;
+    document.getElementById('ordv2').textContent=fmt(n);
+    document.getElementById('pu2').textContent=money(pu);
+    document.getElementById('pm2').textContent=money(n*pu);
+    document.getElementById('py2').textContent=money(n*pu*12);
+    document.getElementById('df2').textContent=mul===1?'—':'+'+money(n*(pu-u))+' / міс';
+  }
+  ord2.value=toSlider(1000);
+  ord2.addEventListener('input',render2);
+  document.querySelectorAll('[data-m]').forEach(function(b){
+    b.addEventListener('click',function(){mul=+b.dataset.m;document.querySelectorAll('[data-m]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});render2()});
+  });
+  document.querySelectorAll('[data-t2]').forEach(function(b){
+    b.addEventListener('click',function(){tier2=+b.dataset.t2;document.querySelectorAll('[data-t2]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});render2()});
+  });
+  render2();
+
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window))return;
+  function countUp(el){
+    var end=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),pre=el.dataset.pre||'',suf=el.dataset.suf||'',t0=null;
+    function step(ts){
+      if(!t0)t0=ts;var k=Math.min((ts-t0)/1400,1),e=1-Math.pow(1-k,3),v=end*e;
+      el.textContent=pre+(dec?v.toFixed(dec).replace('.',','):fmt(v))+suf;
+      if(k<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+    setTimeout(function(){el.textContent=pre+(dec?end.toFixed(dec).replace('.',','):fmt(end))+suf},1700);
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target;
+      if(el.dataset.count)countUp(el);
+      else el.classList.add(el.classList.contains('rv')?'in':'play');
+      io.unobserve(el);
+    });
+  },{threshold:.18});
+  document.querySelectorAll('[data-count],.rv,#hbars,#years,#mchart').forEach(function(el){
+    var r=el.getBoundingClientRect();
+    if(r.top<innerHeight&&r.bottom>0)return;
+    io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>

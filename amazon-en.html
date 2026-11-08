@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ORBITA IX · Amazon</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://global.orbita-ix.com/amazon-en.html">
+<link rel="alternate" hreflang="uk" href="https://global.orbita-ix.com/amazon.html">
+<link rel="alternate" hreflang="en" href="https://global.orbita-ix.com/amazon-en.html">
+<meta name="description" content="A turnkey Amazon store project: Mexico and Canada, the model, team, stages and profit calculators.">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#FFFDF8; --panel:#F6F2E9; --sunk:#EFE9DC;
+  --ink:#0F1A2A; --ink2:#545D6B; --muted:#8A8578; --line:#E4DCCB;
+  --accent:#8A6A22; --accent-soft:#F3EAD5;
+  --teal:#0E1F31; --teal-soft:#E3E8EF;
+  --plum:#0E4B8C; --plum-soft:#E2EAF3;
+  --bar:#C9C1AE;
+  --display:Georgia,"Times New Roman",serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#FFFDF8}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.025em;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,4.2vw,44px);line-height:1.12}
+h3{font-size:19px;line-height:1.3;font-weight:500}
+p{margin:0}
+.lead{font-size:clamp(18px,2vw,21px);color:var(--ink2);max-width:62ch}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.num{font-variant-numeric:tabular-nums}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#0A1725;border-bottom:1px solid rgba(148,166,190,.16)}
+.nav a{color:#94A6BE!important}.nav a:hover{background:rgba(148,166,190,.12)!important;color:#EDF2F9!important}
+.back{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}.back img{height:22px;width:auto;display:block}.back span{font:500 12px var(--mono);color:#B08A34}
+.langsw{display:flex;border:1px solid rgba(148,166,190,.35);border-radius:2px;flex:none;margin-left:auto}.langsw a,.langsw b{font:600 12px/1 var(--mono);letter-spacing:.08em;padding:8px 10px;text-decoration:none}.langsw a{color:#94A6BE!important}.langsw b{background:#B08A34;color:#0A1725}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:56px}
+.brand{font:400 14px/1 var(--display);white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{display:block;padding:8px 10px;font-size:14px;color:var(--ink2);text-decoration:none;border-radius:8px;white-space:nowrap}
+.nav a:hover{background:var(--panel);color:var(--ink)}
+
+section{padding-block:96px;border-bottom:1px solid var(--line)}
+.head{display:grid;gap:16px;margin-bottom:48px;max-width:780px}
+
+.hero{padding-block:72px 64px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(34px,5.6vw,64px);line-height:1.05;margin-block:18px 22px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.route{width:100%;height:auto;display:block;overflow:visible}
+.route text{font-family:var(--body);fill:var(--muted);font-size:13px}
+.route .lbl{font-family:var(--display);font-weight:500;fill:var(--ink);font-size:15px}
+.route .path{fill:none;stroke:var(--line);stroke-width:2}
+.route .flow{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:6 10;animation:dash 1.6s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-32}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
+.stat{background:var(--panel);border-radius:14px;padding:22px 22px 20px;display:grid;gap:8px;align-content:start}
+.stat b{font:400 clamp(28px,3.4vw,38px)/1 var(--display);font-variant-numeric:tabular-nums}
+.stat.acc b{color:var(--accent)}
+.stat span{font-size:15px;color:var(--ink2)}
+.note{font-size:14px;color:var(--muted);margin-top:16px;max-width:80ch}
+.note sup,.stat sup{color:var(--accent)}
+
+/* liveliness */
+.hero{background:#FFFDF8}
+.hero .stat{background:#FFFFFF;border:1px solid var(--line)}
+.tint-a{background:#F6F2E9}
+.tint-b{background:#F0F3F7}
+.tint-a .panel,.tint-b .panel,.tint-a .chartbox,.tint-b .yr,.tint-a .person,.tint-b .sc,.tint-a .tbl{background:#FFFFFF;border:1px solid var(--line)}
+.tint-a .au{background:#FFFFFF}
+.tint-a .au.later{background:transparent}
+.sc{transition:transform .25s,box-shadow .25s}
+.sc:hover,.au:hover,.panel:hover{transform:translateY(-3px);border-color:#B08A34}
+.au,.panel{transition:transform .25s,box-shadow .25s}
+.flow-wrap{position:relative;padding-top:26px}
+.flow-track{position:absolute;left:0;right:0;top:8px;height:2px;background:repeating-linear-gradient(90deg,var(--bar) 0 6px,transparent 6px 12px)}
+.parcel{position:absolute;top:-9px;left:0;width:20px;height:20px;color:var(--accent);animation:travel 7s linear infinite}
+@keyframes travel{from{left:0}to{left:calc(100% - 20px)}}
+.fs{animation:pulse 7s infinite;animation-delay:calc(var(--i) * 1s)}
+@keyframes pulse{0%,16%,100%{transform:none}5%,11%{transform:translateY(-6px);background:#FFFFFF}}
+.fs.pr{border-image:linear-gradient(90deg,var(--accent) 50%,var(--teal) 50%) 1;border-top-width:3px;border-top-style:solid}
+.fs.t{border-top-color:var(--teal)}
+.mbars{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:end;height:220px;border-bottom:1px solid var(--line);margin-top:8px}
+.mbars div{height:var(--h);border-radius:6px 6px 0 0;background:var(--plum);display:flex;align-items:flex-start;justify-content:center;padding-top:10px;color:#FFFFFF;font:400 18px/1 var(--display);transform-origin:bottom}
+.mbars div:first-child{background:var(--bar);color:var(--ink)}
+.mbars div.more{background:var(--plum);color:#FFFFFF;border-top:3px dashed #B08A34}
+.seg.s4{grid-template-columns:repeat(4,1fr)}
+.calc2{margin-top:32px}
+.out .gain{color:#8FD9CF}
+.mlabels{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;font-size:14px;color:var(--ink2);margin-top:10px;text-align:center}
+.play .mbars div{animation:rise 1.3s cubic-bezier(.2,.7,.2,1) both}
+.play .mbars div:nth-child(2){animation-delay:.15s}.play .mbars div:nth-child(3){animation-delay:.3s}.play .mbars div:nth-child(4){animation-delay:.45s}
+.dots i{transition:transform .3s}
+.gcol.in .dots i{animation:pop .5s cubic-bezier(.3,1.6,.5,1) both}
+.gcol.in .dots i:nth-child(2){animation-delay:.08s}.gcol.in .dots i:nth-child(3){animation-delay:.16s}.gcol.in .dots i:nth-child(4){animation-delay:.24s}.gcol.in .dots i:nth-child(5){animation-delay:.32s}.gcol.in .dots i:nth-child(6){animation-delay:.4s}.gcol.in .dots i:nth-child(7){animation-delay:.48s}.gcol.in .dots i:nth-child(8){animation-delay:.56s}
+@keyframes pop{from{transform:scale(0)}}
+.del-wrap{position:relative}
+.truck{position:absolute;top:-34px;left:0;width:30px;height:30px;color:var(--plum);animation:drive 6s ease-in-out infinite}
+@keyframes drive{0%{left:0}90%,100%{left:calc(100% - 40px)}}
+.route .maybe{stroke-dasharray:3 7;opacity:.55}
+@media (max-width:960px){.flow-track,.parcel,.truck{display:none}.flow-wrap{padding-top:0}.mbars{height:170px}}
+
+/* schemes */
+.schemes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:56px}
+.sc{border:1px solid var(--line);border-radius:16px;padding:26px;display:grid;gap:12px;align-content:start;background:var(--bg)}
+.sc .when-tag{justify-self:start;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:99px}
+.sc p{color:var(--ink2);font-size:16px}
+.sc .k{font:400 30px/1 var(--display);color:var(--ink)}
+.sc .k small{font:500 14px var(--body);color:var(--muted);margin-left:6px}
+
+.flow-steps{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;counter-reset:s}
+.fs{background:var(--panel);border-radius:12px;padding:18px 14px 16px;display:grid;gap:8px;align-content:start;border-top:3px solid var(--bar)}
+.fs::before{counter-increment:s;content:counter(s,decimal-leading-zero);font:500 12px/1 var(--mono);color:var(--muted)}
+.fs h3{font-size:15px}
+.fs p{font-size:14px;color:var(--ink2);line-height:1.45}
+.fs.b{border-top-color:var(--accent)} .fs.p{border-top-color:var(--plum)} .fs.a{border-top-color:var(--bar)}
+.legend-line{display:flex;gap:20px;flex-wrap:wrap;margin-top:18px;font-size:14px;color:var(--ink2)}
+.legend-line i{display:inline-block;width:14px;height:4px;border-radius:2px;vertical-align:3px;margin-right:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.panel{background:var(--panel);border-radius:16px;padding:28px;display:grid;gap:12px;align-content:start}
+.panel p{color:var(--ink2)}
+.tag{justify-self:start;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent)}
+.tag.t{background:var(--teal-soft);color:var(--teal)}
+.tag.p{background:var(--plum-soft);color:var(--plum)}
+
+/* hbars */
+.chartbox{border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;gap:18px}
+.hbars{display:grid;gap:14px}
+.hb{display:grid;grid-template-columns:220px 1fr 92px;gap:16px;align-items:center}
+.hb .k{font-size:15px;color:var(--ink2)}
+.hb .k b{display:block;color:var(--ink);font-weight:600}
+.hb .track{height:28px}
+.hb .bar{height:100%;width:var(--w);background:var(--bar);border-radius:0 4px 4px 0;transform-origin:left}
+.hb.us .bar{background:var(--teal)}
+.hb .v{font:500 15px/1 var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.play .bar{animation:grow 1.1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.chart-cap{font-size:14px;color:var(--muted)}
+.divider{height:1px;background:var(--line);margin-block:6px}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:1fr 1.1fr;gap:24px}
+.ctrl{display:grid;gap:28px;align-content:start}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--panel);padding:5px;border-radius:12px}
+.seg button{all:unset;cursor:pointer;text-align:center;padding:10px 6px;border-radius:9px;font-size:14px;color:var(--ink2);display:grid;gap:2px}
+.seg button b{font:600 15px/1.2 var(--body);color:var(--ink)}
+.seg button[aria-pressed="true"]{background:#FFFFFF;box-shadow:inset 0 0 0 1.5px #B08A34}
+.seg button:focus-visible{outline:2px solid var(--accent)}
+.lb{font-size:14px;color:var(--muted);display:block;margin-bottom:10px}
+.ordval{font:400 44px/1 var(--display);font-variant-numeric:tabular-nums}
+.ordval small{font:500 15px var(--body);color:var(--muted);margin-left:8px}
+input[type=range]{width:100%;accent-color:var(--accent);margin-top:14px;height:28px}
+.ticks{display:flex;justify-content:space-between;font:500 12px var(--mono);color:var(--muted)}
+.presets{display:flex;gap:8px;flex-wrap:wrap}
+.presets button{all:unset;cursor:pointer;font-size:13px;padding:7px 12px;border:1px solid var(--line);border-radius:99px;color:var(--ink2)}
+.presets button:hover{border-color:var(--accent);color:var(--ink)}
+.out{background:#0A1725;color:#EDF2F9;border-radius:18px;padding:32px;display:grid;gap:22px;align-content:start}
+.out .big{display:grid;gap:6px}
+.out .big span{font-size:14px;opacity:.75}
+.out .big b{font:400 clamp(40px,5.4vw,60px)/1 var(--display);color:#B08A34;font-variant-numeric:tabular-nums}
+.out .row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:20px;border-top:1px solid rgba(232,238,240,.18)}
+.out .row div{display:grid;gap:4px}
+.out .row span{font-size:13px;opacity:.75}
+.out .row b{font:600 20px/1.2 var(--body);font-variant-numeric:tabular-nums}
+.out p{font-size:13px;opacity:.7}
+
+.years{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.yr{border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;gap:14px;align-content:start}
+.yr .ph{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.yr h3{font-size:21px}
+.yr .col{height:180px;display:flex;align-items:flex-end;border-bottom:1px solid var(--line)}
+.yr .col div{width:100%;height:var(--h);min-height:3px;background:var(--teal);border-radius:4px 4px 0 0;transform-origin:bottom}
+.play .yr .col div{animation:rise 1.2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:scaleY(0)}}
+.yr dl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin:0;font-size:15px}
+.yr dt{color:var(--ink2)} .yr dd{margin:0;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.yr dd.p{color:var(--accent);font:400 20px/1.2 var(--display)}
+
+/* timeline */
+.tl-item{display:grid;grid-template-columns:150px 1fr;gap:32px;padding-block:32px;border-top:1px solid var(--line)}
+.tl-item:first-child{border-top:0;padding-top:0}
+.when{display:grid;gap:6px;align-content:start}
+.when b{font:400 22px/1.1 var(--display)}
+.when span{font:500 12px/1.3 var(--mono);color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.tl-body{display:grid;gap:14px}
+.tl-body h3{font-size:20px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.split .panel{padding:22px}
+.split h4{margin:0;font:600 15px/1.3 var(--body)}
+.chk{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.split .chk{grid-template-columns:1fr}
+.chk li{position:relative;padding-left:22px;color:var(--ink2);font-size:16px}
+.chk li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--accent)}
+
+/* people */
+.people{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.person{border:1px solid var(--line);border-radius:18px;padding:30px;display:grid;gap:18px;align-content:start}
+.person header{display:flex;gap:16px;align-items:center}
+.av{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--teal-soft);color:var(--teal);flex:none}
+.av.a{background:var(--accent-soft);color:var(--accent)}
+.av svg{width:26px;height:26px}
+.person header div{display:grid;gap:2px}
+.person header small{font:500 12px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.duty{display:grid;gap:14px}
+.duty div{display:grid;grid-template-columns:28px 1fr;gap:10px}
+.duty i{font:500 12px/1.6 var(--mono);color:var(--muted);font-style:normal}
+.duty b{font-weight:600}
+.duty p{font-size:15px;color:var(--ink2);line-height:1.5}
+
+.auto{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.au{background:var(--panel);border-radius:14px;padding:18px;display:grid;gap:8px;align-content:start}
+.au .fr{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.au.later{background:var(--bg);border:1px dashed var(--bar)}
+.au.later .fr{color:var(--muted)}
+.au b{font-weight:600;font-size:16px;line-height:1.3}
+.au p{font-size:14px;color:var(--ink2);line-height:1.45}
+
+/* team */
+.grow{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.gcol{padding:26px 22px;display:grid;gap:16px;align-content:start;border-left:1px solid var(--line)}
+.gcol:first-child{border-left:0;background:var(--panel)}
+.gcol .when b{font-size:18px}
+.dots{display:flex;gap:6px;flex-wrap:wrap;min-height:30px;align-items:center}
+.dots i{width:26px;height:26px;border-radius:50%;background:var(--teal)}
+.dots i.a{background:var(--accent)} .dots i.p{background:var(--plum)}
+.dots i.n{background:transparent;border:2px dashed var(--muted)}
+.dots em{font:500 13px var(--mono);color:var(--muted);font-style:normal;margin-left:4px}
+.gcol ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:15px;color:var(--ink2)}
+.gcol li b{color:var(--ink);font-weight:600}
+.lg{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:8px}
+
+/* delivery */
+.del{display:grid;grid-template-columns:repeat(4,1fr)}
+.dstep{padding:0 18px 0 0;display:grid;gap:12px;align-content:start;position:relative}
+.dstep .ic{width:56px;height:56px;border-radius:50%;background:#FFFFFF;border:2px solid var(--plum);display:grid;place-items:center;color:var(--plum);position:relative;z-index:1}
+.dstep .ic svg{width:26px;height:26px}
+.dstep::after{content:"";position:absolute;top:28px;left:56px;right:0;height:2px;background:repeating-linear-gradient(90deg,var(--plum) 0 6px,transparent 6px 12px)}
+.dstep:last-child::after{display:none}
+.dstep p{font-size:15px;color:var(--ink2)}
+
+/* growth plan */
+.gp{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:16px;align-items:stretch}
+.gp .arrow{display:grid;place-items:center;color:var(--accent)}
+.gp .arrow svg{width:34px;height:34px}
+.mx{display:flex;align-items:flex-end;gap:10px;height:90px;margin-top:6px}
+.mx div{flex:1;background:var(--teal);border-radius:4px 4px 0 0;display:flex;align-items:flex-start;justify-content:center;color:#fff;font:600 13px/1 var(--mono);padding-top:8px}
+.mx div:first-child{background:var(--bar);color:var(--ink)}
+
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:16px}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th,td{text-align:left;padding:18px 22px;border-top:1px solid var(--line);vertical-align:top;font-size:16px}
+thead th{border-top:0;font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+td:first-child{font-weight:600;width:26%}
+td{color:var(--ink2)}
+
+.close{border-bottom:0;background:var(--panel)}
+.close h2{max-width:22ch;margin-top:16px}
+.close .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.close .steps div{border-top:2px solid var(--accent);padding-top:16px;display:grid;gap:8px}
+.close .steps b{font:500 17px/1.3 var(--display)}
+.close .steps p{font-size:15px;color:var(--ink2)}
+.fine{margin-top:56px;font-size:13px;color:var(--muted);max-width:90ch}
+
+.stat b,.ordval,.out .big b,.yr dd.p,.sc .k,.mbars div,.hb .v{font-family:var(--body)!important;font-weight:700!important;letter-spacing:-.02em}
+.rv.in{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
+.fs.rv.in{animation:up .8s cubic-bezier(.2,.7,.2,1) both,pulse 7s .8s infinite}
+.fs.rv.in{animation-delay:0s,calc(var(--i) * 1s + .8s)}
+@keyframes up{from{transform:translateY(22px);opacity:.25}}
+
+@media (max-width:960px){
+  .hero-grid,.calc,.two,.people,.split{grid-template-columns:1fr}
+  .schemes{grid-template-columns:1fr}
+  .flow-steps{grid-template-columns:repeat(2,1fr)}
+  .auto{grid-template-columns:repeat(2,1fr)}
+  .grow{grid-template-columns:1fr 1fr}
+  .gcol:nth-child(3){border-left:0}
+  .gcol:nth-child(n+3){border-top:1px solid var(--line)}
+  .years{grid-template-columns:1fr}
+  .yr .col{height:120px}
+  .del{grid-template-columns:1fr 1fr;row-gap:32px}
+  .dstep:nth-child(2)::after{display:none}
+  .gp{grid-template-columns:1fr}
+  .gp .arrow{transform:rotate(90deg)}
+  .close .steps{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding-inline:16px}
+  section{padding-block:64px}
+  .stats{grid-template-columns:1fr}
+  .flow-steps,.auto,.grow,.del{grid-template-columns:1fr}
+  .gcol{border-left:0;border-top:1px solid var(--line)}
+  .gcol:first-child{border-top:0}
+  .dstep::after{display:none}
+  .hb{grid-template-columns:1fr 80px;gap:6px 12px}
+  .hb .k{grid-column:1/-1}
+  .tl-item{grid-template-columns:1fr;gap:12px}
+  .chk{grid-template-columns:1fr}
+  .out .row{grid-template-columns:1fr}
+  .nav ul{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="back" href="index.html#en" aria-label="ORBITA IX — home"><span>←</span><img src="img/logo-light.png" alt="ORBITA IX" width="88" height="22"></a>
+    <ul>
+      <li><a href="#schemes">Models</a></li>
+      <li><a href="#market">Market</a></li>
+      <li><a href="#money">Earnings</a></li>
+      <li><a href="#launch">Launch</a></li>
+      <li><a href="#work">Roles</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#delivery">Delivery</a></li>
+      <li><a href="#growth">Growth</a></li>
+      <li><a href="#risks">Risks</a></li>
+    </ul>
+    <div class="langsw"><a href="amazon.html">UA</a><b>EN</b></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">ORBITA IX · Amazon project</div>
+        <h1>An Amazon store launching in <em>Mexico and&nbsp;Canada</em></h1>
+        <p class="lead">We propose to launch a store that sells branded goods from Amazon suppliers to shoppers in Mexico and Canada, then expands to other marketplaces. Our team includes people who have launched this model and work with it: a technical system pushes prices and stock every day, while the brands and account protection team opens brands and keeps the store in good standing.</p>
+      </div>
+      <svg class="route" viewBox="0 0,600,380" role="img" aria-label="Diagram: products from Amazon suppliers reach the Mexican and Canadian marketplaces through our system; Brazil is under study">
+        <path class="path" d="M150,190 C 240,190, 250 70, 380 70"/>
+        <path class="path" d="M150,190 C 250,190, 290,190, 380,190"/>
+        <path class="path" d="M150,190 C 240,190, 250,310, 380,310"/>
+        <path class="flow" d="M150,190 C 240,190, 250 70, 380 70"/>
+        <path class="flow maybe" d="M150,190 C 250,190, 290,190, 380,190" style="animation-delay:-.5s"/>
+        <path class="flow" d="M150,190 C 240,190, 250,310, 380,310" style="animation-delay:-1s"/>
+        <circle r="5" fill="#B08A34"><animateMotion dur="3.2s" repeatCount="indefinite" path="M150,190 C 240,190, 250 70, 380 70"/></circle>
+                <circle r="5" fill="#B08A34"><animateMotion dur="3.6s" begin="-2s" repeatCount="indefinite" path="M150,190 C 240,190, 250,310, 380,310"/></circle>
+        <rect x="4" y="150" width="146" height="80" rx="14" fill="#F6F2E9" stroke="#E4DCCB"/>
+        <text class="lbl" x="77" y="186" text-anchor="middle" style="font-size:13px">Suppliers</text>
+        <text x="77" y="208" text-anchor="middle">on Amazon</text>
+        <rect x="222" y="166" width="92" height="48" rx="12" fill="#0E1F31"/>
+        <text x="268" y="187" text-anchor="middle" style="fill:#FFFFFF;font-size:12px">our</text>
+        <text x="268" y="203" text-anchor="middle" style="fill:#FFFFFF;font-size:12px">system</text>
+        <g>
+          <circle cx="398" cy="70" r="22" fill="#F3EAD5" stroke="#B08A34" stroke-width="2"/>
+          <text x="398" y="75" text-anchor="middle" style="font-family:var(--mono);font-size:12px;fill:#B08A34">MX</text>
+          <text class="lbl" x="432" y="66">Mexico</text><text x="432" y="86">amazon.com.mx</text>
+        </g>
+        <g>
+          <circle cx="398" cy="190" r="22" fill="#FFFFFF" stroke="#C9C1AE" stroke-width="2" stroke-dasharray="4 4"/>
+          <text x="398" y="195" text-anchor="middle" style="font-family:var(--mono);font-size:12px;fill:#8A8578">BR</text>
+          <text class="lbl" x="432" y="186" style="fill:#8A8578">Brazil</text><text x="432" y="206">under study</text>
+        </g>
+        <g>
+          <circle cx="398" cy="310" r="22" fill="#F3EAD5" stroke="#B08A34" stroke-width="2"/>
+          <text x="398" y="315" text-anchor="middle" style="font-family:var(--mono);font-size:12px;fill:#B08A34">CA</text>
+          <text class="lbl" x="432" y="306">Canada</text><text x="432" y="326">amazon.ca</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="stats">
+      <div class="stat acc"><b class="num" data-count="13.8" data-dec="1" data-pre="$" data-suf="M">$13.8M</b><span>in orders over 6 months at one store running this model, about $75K in orders per day</span></div>
+      <div class="stat"><b class="num" data-count="12500">12,500</b><span>orders per month at one of the competitors we studied</span></div>
+      <div class="stat"><b class="num">$15–40<sup>*</sup></b><span>estimated profit per item sold, depending on the item price</span></div>
+    </div>
+    <p class="note">Order value shows how much shoppers ordered before purchasing costs, Amazon fees and shipping. It is not profit. <sup>*</sup>Profit per item depends on shipping cost: the shipping setup is still being configured, so the figures are estimates.</p>
+  </div>
+</header>
+
+<section id="schemes" class="tint-b">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Sales models</div>
+      <h2>How we sell on Amazon</h2>
+      <p class="lead">We list well-known brands from Amazon suppliers and buy each item only after a shopper has ordered it. An intermediary warehouse is needed from day one: parcels arrive there, get repacked and are shipped to shoppers. We start with the model that brings the first sales and gradually add the ones with higher margins.</p>
+    </div>
+
+    <div class="schemes">
+      <div class="sc rv">
+        <span class="when-tag" style="background:var(--accent-soft);color:var(--accent)">Launch · first sales in months 2–3</span>
+        <h3>Joining existing listings</h3>
+        <p>The product already has a listing on Amazon in that region, with photos, a description and reviews. We add our offer at our price, and the system keeps price and stock up to date every day. No content needs to be created, which is why this model brings the first sales right after the month of preparation.</p>
+      </div>
+      <div class="sc rv">
+        <span class="when-tag" style="background:var(--teal-soft);color:var(--teal)">Second stage</span>
+        <h3>Creating new listings</h3>
+        <p>We list products in regions where they are not yet available. For each listing we prepare content: we source or generate photos and write the title, description and specifications. A listing of our own faces less competition, and we set the price.</p>
+      </div>
+      <div class="sc rv">
+        <span class="when-tag" style="background:var(--plum-soft);color:var(--plum)">In parallel, after launch</span>
+        <h3>Direct suppliers</h3>
+        <div class="k">×2…×5+<small>margin</small></div>
+        <p>We negotiate better purchase prices directly with the suppliers of brands that already sell. The margin can be several times higher than at launch: 2, 3, 5 times or more, depending on the agreements and volumes.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom:20px">The path of every product</h3>
+    <div class="flow-wrap">
+    <div class="flow-track" aria-hidden="true"><svg class="parcel" viewBox="0 0 24 24" fill="#F3EAD5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l8 4v10l-8 4-8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10" fill="none"/></svg></div>
+    <div class="flow-steps">
+      <div class="fs b rv" style="--i:0"><h3>Market analysis</h3><p>We pick brands with demand and without unnecessary restrictions</p></div>
+      <div class="fs t rv" style="--i:1"><h3>Data collection</h3><p>Prices, stock, photos and specifications from Amazon suppliers</p></div>
+      <div class="fs pr rv" style="--i:2"><h3>Price</h3><p>The brands team sets the rules, the system calculates: cost, shipping, fees, margin</p></div>
+      <div class="fs t rv" style="--i:3"><h3>Product listing</h3><p>We join an existing listing or create a new one</p></div>
+      <div class="fs p rv" style="--i:4"><h3>Order</h3><p>A shopper in Mexico or Canada pays for the item</p></div>
+      <div class="fs p rv" style="--i:5"><h3>Purchase and shipping</h3><p>We buy the item; the intermediary warehouse repacks and ships it</p></div>
+      <div class="fs a rv" style="--i:6"><h3>Payout</h3><p>Amazon transfers the funds 30+ days after the sale</p></div>
+    </div>
+    </div>
+    <div class="legend-line"><span><i style="background:var(--accent)"></i>brands and account protection</span><span><i style="background:var(--teal)"></i>technical team</span><span><i style="background:var(--plum)"></i>purchasing and delivery</span><span><i style="background:var(--bar)"></i>Amazon</span></div>
+
+    <div class="two">
+      <div class="panel rv">
+        <span class="tag t">How it scales</span>
+        <h3>The system and the team grow together</h3>
+        <p>The system takes over the routine: it collects data, calculates prices and updates stock every day. But the more products and brands there are, the more people are needed so that each person controls their own area. The team grows with the catalogue and sales, and its growth is paid for by the store's profit.</p>
+      </div>
+      <div class="panel rv">
+        <span class="tag">Why these markets</span>
+        <h3>Mexico and Canada first</h3>
+        <p>This is where competitors already earn with this model: one of them makes 64% of its sales in Mexico. One Amazon seller account opens access to several marketplaces, so the next market does not require a new store from scratch. Brazil is still an open question: we are studying the restrictions currently in place there. Next we expand to other marketplaces: Amazon operates in almost twenty countries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="market" class="tint-a">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Market</div>
+      <h2>Other companies already earn with this model</h2>
+      <p class="lead">We studied competitors on these marketplaces: they have millions of products and thousands of orders every month. Our year-three target approaches the level of the largest of them.</p>
+    </div>
+
+    <div class="chartbox">
+      <h3>Orders per month</h3>
+      <div class="hbars" id="hbars">
+        <div class="hb"><div class="k"><b>Largest competitor</b>9.1M products, 64% of sales in Mexico</div><div class="track"><div class="bar" style="--w:100%"></div></div><div class="v" data-count="12500">12,500</div></div>
+        <div class="hb"><div class="k"><b>Smaller competitor</b>2.1M products, Mexico and Canada only</div><div class="track"><div class="bar" style="--w:16%"></div></div><div class="v" data-count="2000">2,000</div></div>
+        <div class="divider"></div>
+        <div class="hb us"><div class="k"><b>Our target, year 3</b>capitalisation</div><div class="track"><div class="bar" style="--w:80%"></div></div><div class="v">up to 10,000</div></div>
+        <div class="hb us"><div class="k"><b>Our target, year 2</b>scale</div><div class="track"><div class="bar" style="--w:24%"></div></div><div class="v">up to 3,000</div></div>
+        <div class="hb us"><div class="k"><b>Our target, year 1</b>foundation</div><div class="track"><div class="bar" style="--w:2.4%"></div></div><div class="v">up to 300</div></div>
+      </div>
+      <p class="chart-cap">Competitor figures are estimates from our market research. All rows use one scale.</p>
+    </div>
+
+    <div class="two">
+      <div class="panel rv">
+        <span class="tag">What the market shows</span>
+        <h3>Competitors grow by quantity, not quality</h3>
+        <p>The largest competitor has more than 1.6M inactive or incomplete listings. The smaller competitor gets mass suspensions from adding products without a system. Both problems are solved with entry filters and daily control.</p>
+      </div>
+      <div class="panel rv">
+        <span class="tag t">Our approach</span>
+        <h3>Fewer products, better selection</h3>
+        <p>We enter with brands checked for demand, trademarks and restrictions. Every listing passes a filter of banned words and categories. A healthy account lets us open new brands faster than competitors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="money" class="tint-b">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Earnings</div>
+      <h2>How much can be earned</h2>
+      <p class="lead">Profit is simple to calculate: the number of orders multiplied by the profit per item. Choose a price segment and a volume to see the monthly result.</p>
+    </div>
+
+    <div class="calc">
+      <div class="ctrl">
+        <div>
+          <span class="lb" id="seg-l">Price segment</span>
+          <div class="seg" role="group" aria-labelledby="seg-l">
+            <button type="button" id="t0" data-t="0" aria-pressed="false"><b>under $30</b>~$15 per item</button>
+            <button type="button" id="t1" data-t="1" aria-pressed="true"><b>$30–50</b>~$25 per item</button>
+            <button type="button" id="t2" data-t="2" aria-pressed="false"><b>$50–100</b>~$40 per item</button>
+          </div>
+        </div>
+        <div>
+          <label class="lb" for="ord">Orders per month</label>
+          <div class="ordval num"><span id="ordv">1,000</span><small>orders</small></div>
+          <input type="range" id="ord" min="0" max="1000" step="1" value="500">
+          <div class="ticks"><span>50</span><span>300</span><span>1,000</span><span>3,000</span><span>10,000</span></div>
+        </div>
+        <div>
+          <span class="lb">Business plan stages</span>
+          <div class="presets">
+            <button type="button" data-o="300">Year 1 · 300</button>
+            <button type="button" data-o="3000">Year 2 · 3,000</button>
+            <button type="button" data-o="10000">Year 3 · 10,000</button>
+          </div>
+        </div>
+      </div>
+      <div class="out" aria-live="polite">
+        <div class="big"><span>Monthly profit from sales</span><b id="pm">$25,000</b></div>
+        <div class="row">
+          <div><span>Per year</span><b id="py">$300,000</b></div>
+          <div><span>Monthly order value</span><b id="tm">$40,000</b></div>
+          <div><span>Working capital</span><b id="wc">$40,000</b></div>
+        </div>
+        <p>Profit is shown before team and system costs. Profit per item depends on shipping cost, which is still being clarified. Working capital means at least one month of purchases in advance, because Amazon pays out 30+ days after the sale. This money is not spent; it turns over in goods every month.</p>
+      </div>
+    </div>
+
+    <div class="years" id="years">
+      <div class="yr rv">
+        <div class="ph">Year 1 · foundation</div>
+        <h3>70–300 orders per month</h3>
+        <div class="col"><div style="--h:2.8%"></div></div>
+        <dl><dt>Orders per year</dt><dd>~2,500</dd><dt>Profit from sales</dt><dd class="p" data-y="2500">$62,500</dd></dl>
+      </div>
+      <div class="yr rv">
+        <div class="ph">Year 2 · scale</div>
+        <h3>1,000–3,000 orders per month</h3>
+        <div class="col"><div style="--h:26.7%"></div></div>
+        <dl><dt>Orders per year</dt><dd>~24,000</dd><dt>Profit from sales</dt><dd class="p" data-y="24000">$600,000</dd></dl>
+      </div>
+      <div class="yr rv">
+        <div class="ph">Year 3 · capitalisation</div>
+        <h3>5,000–10,000+ orders per month</h3>
+        <div class="col"><div style="--h:100%"></div></div>
+        <dl><dt>Orders per year</dt><dd>~90,000</dd><dt>Profit from sales</dt><dd class="p" data-y="90000">$2.25M</dd></dl>
+      </div>
+    </div>
+    <p class="chart-cap" style="margin-top:18px">Bars show orders per year on one scale. Profit recalculates for the segment selected above. The pace between stages depends on the investment size and how fast brands are opened. By year three the store becomes a liquid asset that can be sold.</p>
+  </div>
+</section>
+
+<section id="launch">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Launch</div>
+      <h2>From preparation to the first sales</h2>
+      <p class="lead">In the first month we prepare the company, the store, the intermediary warehouse, the system and the first brands. Then we check how the first products go through the whole path from order to delivery, and only after that do we scale.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-item rv">
+        <div class="when"><span>Month 1</span><b>Preparation</b></div>
+        <div class="tl-body">
+          <div class="split">
+            <div class="panel">
+              <span class="tag p">Intermediary or company owner</span>
+              <ul class="chk">
+                <li>Company and tax profile registration</li>
+                <li>Opening the seller account and passing Amazon verification</li>
+                <li>Connecting payment systems for payouts</li>
+              </ul>
+              <p style="font-size:15px">This is done by the person the company is registered to, or by an intermediary company that provides these services. For example, Western Bid opens a company in the USA. This is a one-time service; after that the same intermediary works as our warehouse. We prepare instructions and support the process.</p>
+            </div>
+            <div class="panel">
+              <span class="tag t">Done by us</span>
+              <ul class="chk">
+                <li>Market analysis: which brands are in demand now</li>
+                <li>Setting up the technical system</li>
+                <li>Lists of banned words, brands and categories</li>
+                <li>Submitting the first brands for approval</li>
+                <li>First products in the store</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item rv">
+        <div class="when"><span>Months 2–3</span><b>First sales</b></div>
+        <div class="tl-body">
+          <h3>We test the model on real orders</h3>
+          <ul class="chk">
+            <li>First orders, purchasing and delivery to shoppers</li>
+            <li>Price tuning: where a product sells and where it does not</li>
+            <li>Opening new brands every week</li>
+            <li>Brand review on day 30: what stays, what goes</li>
+            <li>Launching ads inside Amazon</li>
+            <li>Setting up the shipping scheme and its cost</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item rv">
+        <div class="when"><span>From month 4</span><b>Scale</b></div>
+        <div class="tl-body">
+          <h3>More brands, products and people</h3>
+          <ul class="chk">
+            <li>Strengthening the team as orders grow</li>
+            <li>Creating new listings in regions where the product is not yet available</li>
+            <li>Finding direct suppliers and working with them</li>
+            <li>Automated purchasing and account health alerts</li>
+            <li>More brands and suppliers in the system</li>
+            <li>Entering new markets and directions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="tint-a">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Who does what</div>
+      <h2>The technical team and the brands and account protection team</h2>
+      <p class="lead">A system that pushes prices and stock for thousands of products every day stores large volumes of data and has to be configured and indexed properly. That is why the technical team has two people from day one: a team lead and a technical assistant, so everything runs without interruption seven days a week. Brands, legal matters and account health are handled by a separate team.</p>
+    </div>
+
+    <div class="people">
+      <div class="person rv">
+        <header><div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9l2 2-2 2M12 13h4"/></svg></div><div><small>Technical team · lead and assistant</small><h3>Data, listings, updates, access</h3></div></header>
+        <div class="duty">
+          <div><i>01</i><p><b>Data collection from Amazon suppliers.</b> Regularly collects prices, stock, photos and specifications for every product.</p></div>
+          <div><i>02</i><p><b>Data storage.</b> The system stores millions of records on products and prices. It has to be configured and indexed properly to run fast.</p></div>
+          <div><i>03</i><p><b>Price calculation.</b> Automatically calculates the price for each marketplace using the agreed pricing rules.</p></div>
+          <div><i>04</i><p><b>Filters.</b> Technically checks every product against the lists of banned words, brands and categories.</p></div>
+          <div><i>05</i><p><b>Product listings.</b> Joins offers to existing listings in bulk and creates new ones with prepared content through Amazon's programmatic access, and fixes upload errors.</p></div>
+          <div><i>06</i><p><b>Daily updates.</b> Makes sure prices and stock in the store match the supplier every day. Otherwise orders get cancelled and items sell at a loss.</p></div>
+          <div><i>07</i><p><b>Access.</b> Keeps the system's access to the accounts. Amazon programmatic access keys must be renewed every 180 days, otherwise the system stops.</p></div>
+        </div>
+      </div>
+      <div class="person rv">
+        <header><div class="av a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div><small>Brands and account protection · team lead</small><h3>Brands, legal support, account health</h3></div></header>
+        <div class="duty">
+          <div><i>01</i><p><b>Market and brand analysis.</b> Selects brands with demand by sales rank and checks restrictions and hazardous goods.</p></div>
+          <div><i>02</i><p><b>Opening brands.</b> 5–10 new brands per week: trademark checks, invoice preparation, applications for approval to sell.</p></div>
+          <div><i>03</i><p><b>Pricing rules.</b> Sets the pricing rules together with the technical team and decides which brands and products to list.</p></div>
+          <div><i>04</i><p><b>Restriction review.</b> Reviews products awaiting approval every day. Opening a brand takes 7–10 days.</p></div>
+          <div><i>05</i><p><b>Account health.</b> Checks the metrics twice a day. If the account health rating drops below 200, Amazon blocks opening new brands.</p></div>
+          <div><i>06</i><p><b>Legal support.</b> Appeals against listing blocks, review of rights-holder complaints, trademarks, invoices and documents. If needed, a brand is paused temporarily.</p></div>
+          <div><i>07</i><p><b>Instructions and new markets.</b> Prepares instructions for registering the company and the store and helps launch on each new marketplace.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px">Automations we are building</h3>
+    <div class="auto">
+      <div class="au rv"><span class="fr">daily</span><b>Price and stock collection</b><p>Supplier data from Amazon updated on a schedule</p></div>
+      <div class="au rv"><span class="fr">daily</span><b>Price recalculation</b><p>A new price when cost, exchange rate or fees change</p></div>
+      <div class="au rv"><span class="fr">daily</span><b>Store sync</b><p>Prices and stock are sent to Amazon automatically</p></div>
+      <div class="au rv"><span class="fr">on upload</span><b>Banned word check</b><p>A product with a risky word or brand does not enter the store</p></div>
+      <div class="au rv"><span class="fr">weekly</span><b>Sales reports</b><p>What sells, what does not, which brands drive the store</p></div>
+      <div class="au rv"><span class="fr">every 180 days</span><b>Access key renewal</b><p>Reminders and replacement of programmatic access keys</p></div>
+      <div class="au later rv"><span class="fr">after 3 months</span><b>Purchase orders</b><p>A new order immediately creates a purchasing task</p></div>
+      <div class="au later rv"><span class="fr">after 3 months</span><b>Account health alerts</b><p>Notifications about new complaints, blocks, rating drops</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Team</div>
+      <h2>Four people at launch, then growth at the pace of orders</h2>
+      <p class="lead">From day one each function is handled by a separate person: one person cannot do it all, and control is needed every day. Once the system runs and orders grow, we strengthen the team where hands are short.</p>
+    </div>
+    <div class="grow">
+      <div class="gcol rv">
+        <div class="when"><span>Month 1</span><b>Launch</b></div>
+        <div class="dots" aria-label="4 people"><i></i><i></i><i class="a"></i><i class="p"></i><em>4</em></div>
+        <ul><li><b>Technical team:</b> team lead and technical assistant</li><li><b>Brands and account protection:</b> team lead</li><li><b>Purchasing:</b> buying, correspondence, parcel tracking</li></ul>
+      </div>
+      <div class="gcol rv">
+        <div class="when"><span>Months 2–3</span><b>Marketing</b></div>
+        <div class="dots" aria-label="4 people and marketing"><i class="a"></i><i></i><i></i><i class="p"></i><i class="n"></i></div>
+        <ul><li><b>Ads inside Amazon:</b> launched for products that already sell</li><li>At first without a dedicated person in this role</li></ul>
+      </div>
+      <div class="gcol rv">
+        <div class="when"><span>Months 4–6</span><b>Strengthening</b></div>
+        <div class="dots" aria-label="the team grows"><i class="a"></i><i class="n"></i><i></i><i></i><i class="n"></i><i class="p"></i></div>
+        <ul><li>We look at how orders are going and add people where hands are short</li><li>If orders grow fast, we strengthen earlier so nothing falls behind</li></ul>
+      </div>
+      <div class="gcol rv">
+        <div class="when"><span>Scale</span><b>Up to 10 people</b></div>
+        <div class="dots" aria-label="up to 10 people"><i class="a"></i><i class="a"></i><i></i><i></i><i></i><i class="p"></i><i class="p"></i><i class="n"></i><em>10</em></div>
+        <ul><li>We redistribute roles to match the store's volume</li><li>Team growth is paid for by the store's own profit</li></ul>
+      </div>
+    </div>
+    <div class="legend-line"><span><i class="lg" style="background:var(--teal)"></i>technical team</span><span><i class="lg" style="background:var(--accent)"></i>brands and account protection</span><span><i class="lg" style="background:var(--plum)"></i>purchasing and delivery</span><span><i class="lg" style="border:2px dashed var(--muted)"></i>new role at this stage</span></div>
+
+    <div class="two">
+      <div class="panel rv">
+        <span class="tag">Marketing</span>
+        <h3>Ads bring many orders</h3>
+        <p>The first sales come from well-chosen products and prices. Already in months two and three we launch ads inside Amazon for the products that sell and grow them together with the catalogue. That way every advertising dollar works on a proven product.</p>
+      </div>
+      <div class="panel rv">
+        <span class="tag t">Access</span>
+        <h3>Working with accounts without interruptions</h3>
+        <p>The system and the team work with the account every day, so access is handed to the responsible people and maintained continuously. The technical team is responsible for programmatic access, the brands and account protection team for account health.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="delivery" class="tint-b">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Delivery</div>
+      <h2>From order to shopper</h2>
+      <p class="lead">Delivery speed affects the store's rating. That is why from day one a separate person on our team handles purchasing: buys the item, makes sure it reaches the intermediary warehouse and is shipped to the shopper on time. The intermediary warehouse (for example, Western Bid in Miami) does not buy goods: it receives our parcel, repacks it and quickly ships it to Mexico, Canada or another market.</p>
+    </div>
+    <div class="del-wrap"><svg class="truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V6h11v10M14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+    <div class="del" style="padding-top:8px">
+      <div class="dstep rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11L21 7H6.2"/><circle cx="9" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg></div><h3>Order</h3><p>The shopper pays for the item on Amazon; the purchasing manager receives the order.</p></div>
+      <div class="dstep rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13H4z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg></div><h3>Purchase</h3><p>The manager buys the item from the supplier with delivery to the intermediary warehouse.</p></div>
+      <div class="dstep rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v10l-8 4-8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg></div><h3>Warehouse</h3><p>The intermediary warehouse receives our parcel, repacks and labels it without delay.</p></div>
+      <div class="dstep rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10M14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div><h3>Shipping</h3><p>The warehouse quickly ships the parcel to the shopper in Mexico, Canada or another market. The tracking number is passed to Amazon, and the manager monitors delivery.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="growth">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Step-by-step growth plan</div>
+      <h2>From arbitrage to direct suppliers</h2>
+      <p class="lead">Arbitrage gives a fast start and shows which brands and directions actually sell. As arbitrage grows, we look for direct suppliers in exactly those directions and start working with them.</p>
+    </div>
+    <div class="gp">
+      <div class="panel rv"><span class="tag">Step 1</span><h3>Arbitrage</h3><p>We buy from Amazon suppliers to order. No stock and no large purchases.</p></div>
+      <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+      <div class="panel rv"><span class="tag t">Step 2</span><h3>Arbitrage growth</h3><p>More brands, new listings, advertising. We see which directions bring the most orders.</p></div>
+      <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+      <div class="panel rv"><span class="tag p">Step 3</span><h3>Direct suppliers</h3><p>We negotiate better prices in the directions that sell. The margin can be several times higher.</p>
+      </div>
+    </div>
+    <div class="chartbox" id="mchart" style="margin-top:32px">
+      <h3>Profit per item compared to arbitrage</h3>
+      <div class="mbars" role="img" aria-label="Arbitrage: ×1. Direct suppliers: ×2, ×3, ×5 and more"><div style="--h:16%">×1</div><div style="--h:33%">×2</div><div style="--h:50%">×3</div><div class="more" style="--h:100%">×5+</div></div>
+      <div class="mlabels"><span>Arbitrage</span><span style="grid-column:span 3;border-top:2px solid var(--plum);padding-top:8px">Direct suppliers: depends on the agreements</span></div>
+      <p class="chart-cap">The exact figure depends on the agreements with the supplier and sales volumes. The data is indicative: shipping cost per item is still being clarified.</p>
+    </div>
+    <div class="calc calc2">
+      <div class="ctrl">
+        <h3>Calculate profit with direct suppliers</h3>
+        <div>
+          <span class="lb" id="mul-l">Margin compared to arbitrage</span>
+          <div class="seg s4" role="group" aria-labelledby="mul-l">
+            <button type="button" data-m="1" aria-pressed="false"><b>×1</b>arbitrage</button>
+            <button type="button" data-m="2" aria-pressed="true"><b>×2</b>supplier</button>
+            <button type="button" data-m="3" aria-pressed="false"><b>×3</b>supplier</button>
+            <button type="button" data-m="5" aria-pressed="false"><b>×5</b>supplier</button>
+          </div>
+        </div>
+        <div>
+          <span class="lb" id="seg2-l">Price segment</span>
+          <div class="seg" role="group" aria-labelledby="seg2-l">
+            <button type="button" data-t2="0" aria-pressed="false"><b>under $30</b>~$15 per item</button>
+            <button type="button" data-t2="1" aria-pressed="true"><b>$30–50</b>~$25 per item</button>
+            <button type="button" data-t2="2" aria-pressed="false"><b>$50–100</b>~$40 per item</button>
+          </div>
+        </div>
+        <div>
+          <label class="lb" for="ord2">Orders per month</label>
+          <div class="ordval num"><span id="ordv2">1,000</span><small>orders</small></div>
+          <input type="range" id="ord2" min="0" max="1000" step="1" value="500">
+          <div class="ticks"><span>50</span><span>300</span><span>1,000</span><span>3,000</span><span>10,000</span></div>
+        </div>
+      </div>
+      <div class="out" aria-live="polite">
+        <div class="big"><span>Monthly profit from sales</span><b id="pm2">$50,000</b></div>
+        <div class="row">
+          <div><span>Per item</span><b id="pu2">$50</b></div>
+          <div><span>Per year</span><b id="py2">$600,000</b></div>
+          <div><span>More than arbitrage</span><b class="gain" id="df2">+$25,000 / mo</b></div>
+        </div>
+        <p>Calculation: profit per item in arbitrage × margin multiplier × number of orders. The multiplier depends on the agreements with the supplier and can be higher than ×5. Profit is shown before team and system costs. The data is indicative: shipping cost per item is still being clarified.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="risks" class="tint-a">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Risks</div>
+      <h2>What can go wrong and how we handle it</h2>
+    </div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Risk</th><th>What happens</th><th>How we handle it</th></tr></thead>
+        <tbody>
+          <tr><td>Cancelled orders</td><td>The item ran out or got more expensive at the supplier while the store shows the old price</td><td>Automatic daily updates of prices and stock</td></tr>
+          <tr><td>Rights-holder complaints</td><td>A brand complains about the sale of its product</td><td>Trademark checks at entry, banned brand lists, invoices</td></tr>
+          <tr><td>Account restrictions</td><td>A drop in the health rating stops brand approvals</td><td>Metrics checked twice a day, appeals, a careful pace of adding products</td></tr>
+          <tr><td>Sales decline</td><td>Demand for some brands falls or competition grows</td><td>New brands opened weekly, day-30 review, new listings, advertising</td></tr>
+          <tr><td>Brazil</td><td>The marketplace currently restricts some options for sellers</td><td>We launch in Mexico and Canada and study Brazil separately</td></tr>
+          <tr><td>Shipping cost</td><td>The shipping scheme is still being configured, so profit per item is an estimate</td><td>Setting up the scheme on the first orders, direct suppliers with better prices</td></tr>
+          <tr><td>Payout delay</td><td>Amazon transfers funds 30+ days later</td><td>Working capital for one month of purchases, gradual volume growth</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <div class="eyebrow">Next step</div>
+    <h2>We launch the first store and prove the model on real sales</h2>
+    <p class="lead" style="margin-top:20px">The first month goes to preparation; first sales come from the second. After the first products are tested, we scale the catalogue, the team and the markets.</p>
+    <div class="steps">
+      <div><b>Meeting</b><p>We answer questions and show how the system works.</p></div>
+      <div><b>Detailed plan</b><p>Budget, timeline and company structure for the investment size.</p></div>
+      <div><b>Launch</b><p>Registering the company, opening the store, setting up the system.</p></div>
+    </div>
+    <p class="fine">This document is indicative. Competitor figures are given to show the scale of the market. Profit from sales is calculated as the number of orders multiplied by the estimated profit per item, excluding team and system costs. Profit per item depends on shipping cost, which is still being clarified. The first markets are Mexico and Canada; Brazil is still an open question while we study the restrictions in place there. A detailed budget is provided separately.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var fmt=function(n){return Math.round(n).toLocaleString('en-US')};
+  var money=function(n){
+    if(n>=1e6){var m=n/1e6;return '$'+(m%1===0?m.toFixed(0):m.toFixed(2).replace(/0$/,''))+'M'}
+    return '$'+fmt(n);
+  };
+  var tiers=[{p:15,c:20,a:20},{p:25,c:40,a:40},{p:40,c:75,a:75}];
+  var tier=1;
+  var ord=document.getElementById('ord');
+  var lo=Math.log(50),hi=Math.log(10000);
+  var toOrders=function(v){var n=Math.exp(lo+(hi-lo)*v/1000);return n<1000?Math.round(n/10)*10:Math.round(n/100)*100};
+  var toSlider=function(n){return Math.round((Math.log(n)-lo)/(hi-lo)*1000)};
+  function render(){
+    var n=toOrders(+ord.value),t=tiers[tier];
+    document.getElementById('ordv').textContent=fmt(n);
+    document.getElementById('pm').textContent=money(n*t.p);
+    document.getElementById('py').textContent=money(n*t.p*12);
+    document.getElementById('tm').textContent=money(n*t.a);
+    document.getElementById('wc').textContent=money(n*t.c);
+    document.querySelectorAll('.yr dd.p').forEach(function(d){d.textContent=money(+d.dataset.y*t.p)});
+  }
+  ord.value=toSlider(1000);
+  ord.addEventListener('input',render);
+  document.querySelectorAll('.seg button[data-t]').forEach(function(b){
+    b.addEventListener('click',function(){
+      tier=+b.dataset.t;
+      document.querySelectorAll('.seg button[data-t]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      render();
+    });
+  });
+  document.querySelectorAll('.presets button').forEach(function(b){
+    b.addEventListener('click',function(){ord.value=toSlider(+b.dataset.o);render()});
+  });
+  render();
+
+  var mul=2,tier2=1,ord2=document.getElementById('ord2');
+  function render2(){
+    var n=toOrders(+ord2.value),u=tiers[tier2].p,pu=u*mul;
+    document.getElementById('ordv2').textContent=fmt(n);
+    document.getElementById('pu2').textContent=money(pu);
+    document.getElementById('pm2').textContent=money(n*pu);
+    document.getElementById('py2').textContent=money(n*pu*12);
+    document.getElementById('df2').textContent=mul===1?'—':'+'+money(n*(pu-u))+' / mo';
+  }
+  ord2.value=toSlider(1000);
+  ord2.addEventListener('input',render2);
+  document.querySelectorAll('[data-m]').forEach(function(b){
+    b.addEventListener('click',function(){mul=+b.dataset.m;document.querySelectorAll('[data-m]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});render2()});
+  });
+  document.querySelectorAll('[data-t2]').forEach(function(b){
+    b.addEventListener('click',function(){tier2=+b.dataset.t2;document.querySelectorAll('[data-t2]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});render2()});
+  });
+  render2();
+
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window))return;
+  function countUp(el){
+    var end=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),pre=el.dataset.pre||'',suf=el.dataset.suf||'',t0=null;
+    function step(ts){
+      if(!t0)t0=ts;var k=Math.min((ts-t0)/1400,1),e=1-Math.pow(1-k,3),v=end*e;
+      el.textContent=pre+(dec?v.toFixed(dec):fmt(v))+suf;
+      if(k<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+    setTimeout(function(){el.textContent=pre+(dec?end.toFixed(dec):fmt(end))+suf},1700);
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target;
+      if(el.dataset.count)countUp(el);
+      else el.classList.add(el.classList.contains('rv')?'in':'play');
+      io.unobserve(el);
+    });
+  },{threshold:.18});
+  document.querySelectorAll('[data-count],.rv,#hbars,#years,#mchart').forEach(function(el){
+    var r=el.getBoundingClientRect();
+    if(r.top<innerHeight&&r.bottom>0)return;
+    io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
