@@ -319,7 +319,7 @@ td{color:var(--ink2)}
 
 <nav class="nav" aria-label="Розділи">
   <div class="wrap">
-    <a class="back" href="index.html" aria-label="ORBITA IX — на головну"><span>←</span><img src="img/logo-light.png" alt="ORBITA IX" width="88" height="22"></a>
+    <a class="back" href="index.html#amazon" id="backLink" aria-label="ORBITA IX — на головну"><span>←</span><img src="img/logo-light.png" alt="ORBITA IX" width="88" height="22"></a>
     <ul>
       <li><a href="#schemes">Схеми</a></li>
       <li><a href="#market">Ринок</a></li>
@@ -905,6 +905,56 @@ td{color:var(--ink2)}
     io.observe(el);
   });
 })();
+</script>
+<style>
+.orb-nav{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px;background:rgba(10,23,37,.94);border:1px solid rgba(148,166,190,.28);border-radius:32px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s;pointer-events:none}
+.orb-nav.show{opacity:1;transform:none;pointer-events:auto}
+.orb-nav button{all:unset;box-sizing:border-box;cursor:pointer;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#EDF2F9;transition:background .2s,color .2s,opacity .2s}
+.orb-nav button:hover{background:rgba(176,138,52,.18);color:#C9A24C}
+.orb-nav button:focus-visible{outline:2px solid #C9A24C;outline-offset:2px}
+.orb-nav button[disabled]{opacity:.25;cursor:default;background:none;color:#EDF2F9}
+.orb-nav button svg{width:18px;height:18px}
+.orb-ring{position:relative;width:46px;height:46px}
+.orb-ring svg{width:46px;height:46px;display:block}
+.orb-ring .bg{fill:none;stroke:rgba(148,166,190,.22);stroke-width:2}
+.orb-ring .pr{fill:none;stroke:#B08A34;stroke-width:2;stroke-linecap:round;transform:rotate(-90deg);transform-origin:23px 23px;transition:stroke-dashoffset .15s linear}
+.orb-ring .pl{transform-origin:23px 23px;transition:transform .15s linear}
+.orb-ring b{position:absolute;inset:0;display:grid;place-items:center;font:600 11px/1 ui-monospace,"SF Mono",Menlo,monospace;color:#EDF2F9;letter-spacing:.02em}
+@media (max-width:680px){.orb-nav{right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:4px}.orb-nav button{width:36px;height:36px}}
+@media (prefers-reduced-motion:reduce){.orb-nav,.orb-ring .pr,.orb-ring .pl{transition:none}}
+</style>
+<nav class="orb-nav" id="orbNav" aria-label="Навігація сторінкою">
+  <button type="button" id="orbUp" aria-label="Попередній розділ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
+  <div class="orb-ring" aria-hidden="true"><svg viewBox="0 0 46 46"><circle class="bg" cx="23" cy="23" r="18"/><circle class="pr" id="orbPr" cx="23" cy="23" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/><g class="pl" id="orbPl"><circle cx="23" cy="5" r="3.5" fill="#C9A24C"/></g></svg><b id="orbN">01</b></div>
+  <button type="button" id="orbDown" aria-label="Наступний розділ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+</nav>
+<script>
+(function(){
+  var nav=document.getElementById('orbNav'),up=document.getElementById('orbUp'),dn=document.getElementById('orbDown');
+  var pr=document.getElementById('orbPr'),pl=document.getElementById('orbPl'),num=document.getElementById('orbN'),C=113.1;
+  var secs=[].slice.call(document.querySelectorAll('.hero, section')).filter(function(s,i,a){return a.indexOf(s)===i&&!s.closest('.orb-nav')});
+  var en=document.documentElement.lang==="en";
+  up.setAttribute('aria-label',en?'Previous section':'Попередній розділ');dn.setAttribute('aria-label',en?'Next section':'Наступний розділ');
+  function head(){var h=document.querySelector('.top, .nav');return h?h.offsetHeight:0}
+  function cur(){var y=window.scrollY+head()+window.innerHeight*.3,c=0;secs.forEach(function(s,i){if(s.getBoundingClientRect().top+window.scrollY<=y)c=i});return c}
+  function go(i){i=Math.max(0,Math.min(secs.length-1,i));var t=i===0?0:secs[i].getBoundingClientRect().top+window.scrollY-head()+1;window.scrollTo({top:t,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
+  function upd(){
+    var max=document.documentElement.scrollHeight-window.innerHeight,p=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0,c=cur();
+    pr.style.strokeDashoffset=(C*(1-p)).toFixed(1);pl.style.transform='rotate('+(p*360).toFixed(1)+'deg)';
+    num.textContent=('0'+(c+1)).slice(-2);
+    up.disabled=window.scrollY<4;dn.disabled=c>=secs.length-1&&p>.995;
+    nav.classList.toggle('show',window.scrollY>window.innerHeight*.5);
+  }
+  up.addEventListener('click',function(){var c=cur(),top=secs[c].getBoundingClientRect().top;go(top<-40&&c>0?c:c-1)});
+  dn.addEventListener('click',function(){var c=cur();if(c>=secs.length-1){window.scrollTo({top:document.documentElement.scrollHeight,behavior:'smooth'})}else go(c+1)});
+  window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+})();
+</script>
+
+<script>
+(function(){try{localStorage.setItem('orbita-lang','uk')}catch(e){}
+var b=document.getElementById('backLink');if(!b)return;
+b.addEventListener('click',function(e){try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin&&!/amazon/.test(r.pathname)&&history.length>1){e.preventDefault();history.back()}}catch(err){}});})();
 </script>
 </body>
 </html>
