@@ -302,7 +302,7 @@ footer img{height:20px;width:auto}
         <p class="lead" data-i="h_lead">Ми автоматизуємо бізнес-процеси за допомогою AI-агентів та інтеграцій, запускаємо проєкти в електронній комерції і будуємо власні продукти. Від ідеї до системи, що працює щодня.</p>
         <div class="cta">
           <a class="btn" href="#automation" data-i="h_cta1">Що ми робимо</a>
-          <a class="btn ghost" href="#contact" data-i="h_cta2">Обговорити задачу</a>
+          <a class="btn ghost" href="#contact" data-i="h_cta2">Обговорити співпрацю</a>
         </div>
       </div>
       <svg class="orbit" viewBox="-90 -20 700 560" role="img" aria-label="Три напрями ORBITA IX: автоматизація, проєкт Amazon, продукти">
@@ -499,7 +499,7 @@ footer img{height:20px;width:auto}
     h_label:"ORBITA IX · AI automation",
     h_title:"Your processes. Our AI agents. <em>Running 24/7.</em>",
     h_lead:"We automate business processes with AI agents and integrations, launch e-commerce projects and build our own products. From idea to a system that runs every day.",
-    h_cta1:"What we do",h_cta2:"Discuss your task",
+    h_cta1:"What we do",h_cta2:"Discuss collaboration",
     o1:"AUTOMATION",o1s:"AI agents & integrations",o2s:"turnkey project",o3:"PRODUCTS",o3s:"workspace for lawyers",
     f3l:"What agents take on",k4v:"$1M+",
     f1:"specialists on the team: AI, automation, data, e-commerce, law",
@@ -669,6 +669,18 @@ footer img{height:20px;width:auto}
 .orb-ring .pr{fill:none;stroke:#B08A34;stroke-width:2;stroke-linecap:round;transform:rotate(-90deg);transform-origin:23px 23px;transition:stroke-dashoffset .15s linear}
 .orb-ring .pl{transform-origin:23px 23px;transition:transform .15s linear}
 .orb-ring b{position:absolute;inset:0;display:grid;place-items:center;font:600 11px/1 ui-monospace,"SF Mono",Menlo,monospace;color:#EDF2F9;letter-spacing:.02em}
+
+.orb-bar{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:#C9A24C;transform-origin:left;transform:scaleX(0);pointer-events:none}
+.top a.orb-cta,.nav a.orb-cta{display:none;align-items:center;flex:none;border-radius:2px;background:#B08A34;color:#0A1725!important;font:600 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;text-decoration:none;white-space:nowrap;padding:10px 14px;box-shadow:none;transition:background .2s}
+.top a.orb-cta.show,.nav a.orb-cta.show{display:inline-flex;animation:ctaIn .35s ease both}
+@keyframes ctaIn{from{opacity:0;transform:translateY(-6px)}}
+.top a.orb-cta:hover,.nav a.orb-cta:hover{background:#C9A24C!important;color:#0A1725!important}
+a.orb-cta:focus-visible{outline:2px solid #C9A24C;outline-offset:2px}
+a.is-active{color:#EDF2F9!important;box-shadow:inset 0 -2px 0 #C9A24C}
+.nav a.back{display:flex;padding:0;background:none!important}
+a.orb-cta .cs{display:none}
+@media (max-width:680px){.top a.orb-cta{margin-left:auto}.top a.orb-cta.show+.lang{margin-left:8px}}
+@media (max-width:680px){.top a.orb-cta,.nav a.orb-cta{font-size:12px;padding:8px 10px}a.orb-cta .cl{display:none}a.orb-cta .cs{display:inline}}
 @media (max-width:680px){.orb-nav{right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:4px}.orb-nav button{width:36px;height:36px}}
 @media (prefers-reduced-motion:reduce){.orb-nav,.orb-ring .pr,.orb-ring .pl{transition:none}}
 </style>
@@ -684,6 +696,24 @@ footer img{height:20px;width:auto}
   var secs=[].slice.call(document.querySelectorAll('.hero, section')).filter(function(s,i,a){return a.indexOf(s)===i&&!s.closest('.orb-nav')});
   var en=document.documentElement.lang==="en";
   up.setAttribute('aria-label',en?'Previous section':'Попередній розділ');dn.setAttribute('aria-label',en?'Next section':'Наступний розділ');
+
+  var hd=document.querySelector('.top, .nav');
+  var bar=document.createElement('i');bar.className='orb-bar';bar.setAttribute('aria-hidden','true');
+  if(hd){if(getComputedStyle(hd).position==='static')hd.style.position='relative';hd.appendChild(bar)}
+  var onIndex=!!document.querySelector('.top');
+  var cta=document.createElement('a');cta.className='orb-cta';cta.href=onIndex?'#contact':'index.html#contact';
+  var anchor=hd&&hd.querySelector('.lang, .langsw');
+  if(anchor){anchor.parentNode.insertBefore(cta,anchor);if(!onIndex){anchor.style.marginLeft='0';cta.style.marginLeft='auto'}}
+  function ctaText(){var e=document.documentElement.lang==='en';cta.innerHTML=e?'<span class="cl">Discuss collaboration</span><span class="cs">Collaborate</span>':'<span class="cl">Обговорити співпрацю</span><span class="cs">Співпраця</span>'}
+  ctaText();new MutationObserver(ctaText).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+  var links=hd?[].slice.call(hd.querySelectorAll('a[href^="#"]')).filter(function(a){return a.getAttribute('href').length>1&&!a.classList.contains('orb-cta')}):[];
+  var lastC=-1;
+  function extra(p,c){
+    bar.style.transform='scaleX('+p.toFixed(4)+')';
+    var past=window.scrollY>window.innerHeight*.7;
+    cta.classList.toggle('show',past&&!(onIndex&&secs[c]&&secs[c].id==='contact'));
+    if(c!==lastC){lastC=c;var id=secs[c]&&secs[c].id;links.forEach(function(a){a.classList.toggle('is-active',!!id&&a.getAttribute('href')==='#'+id)})}
+  }
   function head(){var h=document.querySelector('.top, .nav');return h?h.offsetHeight:0}
   function cur(){var y=window.scrollY+head()+window.innerHeight*.3,c=0;secs.forEach(function(s,i){if(s.getBoundingClientRect().top+window.scrollY<=y)c=i});return c}
   function go(i){i=Math.max(0,Math.min(secs.length-1,i));var t=i===0?0:secs[i].getBoundingClientRect().top+window.scrollY-head()+1;window.scrollTo({top:t,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
@@ -693,6 +723,7 @@ footer img{height:20px;width:auto}
     num.textContent=('0'+(c+1)).slice(-2);
     up.disabled=window.scrollY<4;dn.disabled=c>=secs.length-1&&p>.995;
     nav.classList.toggle('show',window.scrollY>window.innerHeight*.5);
+    extra(p,c);
   }
   up.addEventListener('click',function(){var c=cur(),top=secs[c].getBoundingClientRect().top;go(top<-40&&c>0?c:c-1)});
   dn.addEventListener('click',function(){var c=cur();if(c>=secs.length-1){window.scrollTo({top:document.documentElement.scrollHeight,behavior:'smooth'})}else go(c+1)});
